@@ -53,36 +53,87 @@
         .card{
             margin: 1rem;
             background-color: $color-secundario;
+            box-shadow: 10px 10px 5px 0px rgb(0, 0, 0);
             .card-body{
                 text-align: center;
                 color: $color-primary;
             }
         }
-    }
-    .hacemos{
-        display: flex;
-        .why{
+        .container{
+                width: 100%;      
+                .swiper-container{
+                    width: 100%;
+                    height: 100%;
+                }
+                .swiper-wrapper{  
+                    display: flex;
+                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                    color: #1928c4;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;  
+                    min-height: 100vh;
+                    width: 100%;
+                    .swiper-slide {
+                        position: relative;
+                        font-size: 18px;
+                        background: #ffd700;
+                        border-radius: 15px;
+                        box-shadow: 10px 10px 5px 0px #000000;
+                        text-align: center;
+                        img{
+                            display: block;
+                            width: 100%;
+                            height: 180px;
+                            object-fit: cover;
+                            border-top-left-radius: 15px;
+                            border-top-right-radius: 15px;
+                        
+                        }
+                        .card-description{
+                            padding:1rem 1rem;
+                        }
+                        .card-link{
+                            text-align: center;
+                            a{
+                                text-decoration: none;
+                                color: #1d6ce2;
+                            }
+                        }
+                    }
+            }
+            .swiper-button-next{
+                right: 26px !important;
+            }
+            .swiper-button-prev{
+                left: 26px !important;
+            }                                       
+        }
+        .hacemos{
             display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            width: 50%;
-            .why-2{
-
+            .why{
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
-                background-color: $color-secundario;
-                border-radius: 15px;
-                height: 400px;
-                width: 400px;
-                text-align: center;
+                align-items: center;
+                width: 50%;
+                .why-2{
+
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    background-color: $color-secundario;
+                    border-radius: 15px;
+                    height: 400px;
+                    width: 400px;
+                    text-align: center;
+                }
             }
-        }
-        .video{
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            .video{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
         }
     }
 }
