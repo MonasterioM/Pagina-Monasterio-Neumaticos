@@ -2,6 +2,7 @@
 .cuerpo{
     display: grid;
     background-color: $color-primary;
+    font-family: $font;
     grid-template-areas: 
     "carrusel carrusel"
     "servicios"
@@ -16,6 +17,7 @@
         background-size: cover;
         transition: all .1s ease-in-out;
         animation: banner 28s infinite linear;
+        border: 5px solid rgb(255, 3, 3);
         .banner-content{
             width: 100%;
             height: 100%;
@@ -50,6 +52,7 @@
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
+        border: 5px solid rgb(255, 0, 0);
         .card{
             margin: 1rem;
             background-color: $color-secundario;
@@ -60,10 +63,11 @@
             }
         }
         .container{
-                width: 100%;      
+                width: 90%;
+                height: 50vw;
                 .swiper-container{
-                    width: 100%;
-                    height: 100%;
+                    width: 200vh;
+                    height: 100vw;
                 }
                 .swiper-wrapper{  
                     display: flex;
@@ -104,13 +108,18 @@
             }
             .swiper-button-next{
                 right: 26px !important;
+                background-color: #fff;
             }
             .swiper-button-prev{
                 left: 26px !important;
             }                                       
         }
-        .hacemos{
+    }
+    .hacemos{
             display: flex;
+            align-items: center;
+            height: 100vh;
+            border: 5px solid rgb(255, 0, 0);
             .why{
                 display: flex;
                 flex-direction: column;
@@ -118,7 +127,6 @@
                 align-items: center;
                 width: 50%;
                 .why-2{
-
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
@@ -127,14 +135,59 @@
                     height: 400px;
                     width: 400px;
                     text-align: center;
+                    color: #1928c4;
+                    box-shadow: 10px 10px 5px 0px rgb(0, 0, 0);
+                    h5{
+                        font-weight: 800;
+                        font-size: 30px;
+                    }
+                    p{
+                        font-weight: 400;
+                        font-size: 18px;
+                    }
                 }
-            }
             .video{
                 display: flex;
                 justify-content: center;
                 align-items: center;
             }
+            }
+    }
+    .servicios{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        background-color: #fff;
+        border: 5px solid red;
+        width: 100%;
+        height: 80vh;
+        h3{
+            color: $color-primary;
+            font-size: 60px;
         }
+        .cards-contenedor{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            .card-contenedor{
+                background-color: $color-secundario;
+                margin: 20px;
+                div{
+                    .img{
+                        display: flex;
+                        align-items: center;
+                    }
+                }
+            }
+        }
+    }
+    .ubicacion{
+        display: flex;
+        width: 100%;
+        height: 100vh;
+        border: 5px solid red;
     }
 }
 

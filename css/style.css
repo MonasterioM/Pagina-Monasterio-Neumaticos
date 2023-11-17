@@ -27,6 +27,7 @@ header {
 .cuerpo {
   display: grid;
   background-color: #19284C;
+  font-family: "Roboto Slab", serif;
   grid-template-areas: "carrusel carrusel" "servicios" "ubicacion" "info"; }
   .cuerpo .carrusel {
     position: relative;
@@ -36,7 +37,8 @@ header {
     background-position: center;
     background-size: cover;
     transition: all .1s ease-in-out;
-    animation: banner 28s infinite linear; }
+    animation: banner 28s infinite linear;
+    border: 5px solid #ff0303; }
     .cuerpo .carrusel .banner-content {
       width: 100%;
       height: 100%;
@@ -64,7 +66,8 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap; }
+    flex-wrap: wrap;
+    border: 5px solid red; }
     .cuerpo .vendedores .card {
       margin: 1rem;
       background-color: #ffd700;
@@ -73,10 +76,11 @@ header {
         text-align: center;
         color: #19284C; }
     .cuerpo .vendedores .container {
-      width: 100%; }
+      width: 90%;
+      height: 50vw; }
       .cuerpo .vendedores .container .swiper-container {
-        width: 100%;
-        height: 100%; }
+        width: 200vh;
+        height: 100vw; }
       .cuerpo .vendedores .container .swiper-wrapper {
         display: flex;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -108,30 +112,70 @@ header {
               text-decoration: none;
               color: #1d6ce2; }
       .cuerpo .vendedores .container .swiper-button-next {
-        right: 26px !important; }
+        right: 26px !important;
+        background-color: #fff; }
       .cuerpo .vendedores .container .swiper-button-prev {
         left: 26px !important; }
-    .cuerpo .vendedores .hacemos {
-      display: flex; }
-      .cuerpo .vendedores .hacemos .why {
+  .cuerpo .hacemos {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    border: 5px solid red; }
+    .cuerpo .hacemos .why {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 50%; }
+      .cuerpo .hacemos .why .why-2 {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
-        width: 50%; }
-        .cuerpo .vendedores .hacemos .why .why-2 {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          background-color: #ffd700;
-          border-radius: 15px;
-          height: 400px;
-          width: 400px;
-          text-align: center; }
-      .cuerpo .vendedores .hacemos .video {
+        background-color: #ffd700;
+        border-radius: 15px;
+        height: 400px;
+        width: 400px;
+        text-align: center;
+        color: #1928c4;
+        box-shadow: 10px 10px 5px 0px black; }
+        .cuerpo .hacemos .why .why-2 h5 {
+          font-weight: 800;
+          font-size: 30px; }
+        .cuerpo .hacemos .why .why-2 p {
+          font-weight: 400;
+          font-size: 18px; }
+      .cuerpo .hacemos .why .video {
         display: flex;
         justify-content: center;
         align-items: center; }
+  .cuerpo .servicios {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #fff;
+    border: 5px solid red;
+    width: 100%;
+    height: 80vh; }
+    .cuerpo .servicios h3 {
+      color: #19284C;
+      font-size: 60px; }
+    .cuerpo .servicios .cards-contenedor {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap; }
+      .cuerpo .servicios .cards-contenedor .card-contenedor {
+        background-color: #ffd700;
+        margin: 20px; }
+        .cuerpo .servicios .cards-contenedor .card-contenedor div .img {
+          display: flex;
+          align-items: center; }
+  .cuerpo .ubicacion {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    border: 5px solid red; }
 
 @keyframes banner {
   0% {
