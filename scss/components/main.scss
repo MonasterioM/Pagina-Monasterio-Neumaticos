@@ -4,25 +4,27 @@
     background-color: $color-primary;
     font-family: $font;
     grid-template-areas: 
-    "carrusel carrusel"
+    "carrusel"
+    "vendedores"
+    "hacemos"
     "servicios"
     "ubicacion"
-    "info";
+    "presupuesto";
     .carrusel{
+        grid-area: "carrusel";
         position: relative;
         width: 100%;
-        height: 50vh;
+        height: 80vh;
         background-image: url(../img/carrusel1.jpg);
         background-position: center;
         background-size: cover;
         transition: all .1s ease-in-out;
         animation: banner 28s infinite linear;
-        border: 5px solid rgb(255, 3, 3);
         .banner-content{
             width: 100%;
             height: 100%;
             color: #fff;
-            background-color: rgba(0, 0, 0, 0.600);
+            background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.9023984593837535) 3%, rgba(0,0,0,0) 100%);
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -32,27 +34,35 @@
                 h1{
                     font-family: $font;
                     font-weight: 800;
-                    font-size: 25px;
+                    font-size: 50px;
                     display: flex;
                     justify-content: center;
                     align-items: center;
                     width: 50%;
+                    color: $color-secundario;
                 }
                 p{
                     font-family: $font;
                     width: 50%;
                     font-weight: 400;
                     text-align: center;
+                    font-size: 25px;
+                    color: $color-secundario;
                 }
             }
         }
     }
     .vendedores{
+        grid-area: "vendedores";
         display: flex;
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
-        border: 5px solid rgb(255, 0, 0);
+        h5{
+            color: $color-secundario;
+            font-size: 50px;
+            text-align: center;
+        }
         .card{
             margin: 1rem;
             background-color: $color-secundario;
@@ -85,6 +95,10 @@
                         border-radius: 15px;
                         box-shadow: 10px 10px 5px 0px #000000;
                         text-align: center;
+                        font-family: $font;
+                        .card-title{
+                            color: #000000;
+                        }
                         img{
                             display: block;
                             width: 100%;
@@ -116,10 +130,11 @@
         }
     }
     .hacemos{
+            grid-area: "hacemos";
             display: flex;
             align-items: center;
             height: 100vh;
-            border: 5px solid rgb(255, 0, 0);
+            border-top: 3px solid #ffd700;
             .why{
                 display: flex;
                 flex-direction: column;
@@ -144,6 +159,7 @@
                     p{
                         font-weight: 400;
                         font-size: 18px;
+                        font-weight: 500;
                     }
                 }
             .video{
@@ -154,12 +170,13 @@
             }
     }
     .servicios{
+        grid-area: "servicios";
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
         background-color: #fff;
-        border: 5px solid red;
         width: 100%;
         height: 80vh;
         h3{
@@ -184,10 +201,92 @@
         }
     }
     .ubicacion{
+        grid-area:"ubicacion";
         display: flex;
+        flex-direction: column;
+        justify-content: center;
         width: 100%;
         height: 100vh;
-        border: 5px solid red;
+        h3{
+            color: $color-secundario;
+            font-size: 50px;
+            margin-left: 20%;
+        }
+        .cont-ubi{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            .date{
+                color: $color-secundario;
+                font-size: 25px;
+            }
+        }
+    }
+    .presupuesto{
+        grid-area: "presupuesto";
+        display: flex;
+        height: 100vh;
+        background-color: $color-secundario;
+        justify-content: space-around;
+        align-items: center;
+        .info{
+            color: $color-primary;
+            width: 40%;
+            text-align: start;
+            h3{
+                font-size: 50px;
+                color: $color-primary;
+                font-weight: 800;
+            }
+            p{
+                font-size: 25px;
+            }
+        }
+        form{
+            display: grid;
+            grid-template-areas: 
+            "conteiner3 conteiner4"
+            "mensaje mensaje"
+            "buttom buttom";
+            .conteiner3{
+                grid-area: conteiner3;
+                margin-right: 10px;
+                .formulario{
+                    display: flex;
+                    flex-direction: column;
+                    input{
+                        border-radius: 8px;
+                        background-color: #ffff60;
+                        height: 33px;
+                    }
+                }                
+            }
+            .conteiner4{
+                grid-area: conteiner4;
+                .formulario{
+                    display: flex;
+                    flex-direction: column;
+                }
+                input{
+                    border-radius: 8px;
+                    background-color: #ffff60;
+                    height: 33px;
+                }
+                select{
+                    background-color: #ffff60;
+                }
+            }
+            .mensaje{
+                grid-area: mensaje;
+                textarea{
+                    background-color: #ffff60;
+                }
+            }
+            .buttom{
+                grid-area: buttom;
+            }
+        }
+        box-shadow: 0 10px 5px 0 black;
     }
 }
 

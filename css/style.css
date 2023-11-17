@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&family=Roboto+Slab&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&family=Roboto+Slab:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&family=Roboto+Slab:wght@500&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -28,22 +29,22 @@ header {
   display: grid;
   background-color: #19284C;
   font-family: "Roboto Slab", serif;
-  grid-template-areas: "carrusel carrusel" "servicios" "ubicacion" "info"; }
+  grid-template-areas: "carrusel" "vendedores" "hacemos" "servicios" "ubicacion" "presupuesto"; }
   .cuerpo .carrusel {
+    grid-area: "carrusel";
     position: relative;
     width: 100%;
-    height: 50vh;
+    height: 80vh;
     background-image: url(../img/carrusel1.jpg);
     background-position: center;
     background-size: cover;
     transition: all .1s ease-in-out;
-    animation: banner 28s infinite linear;
-    border: 5px solid #ff0303; }
+    animation: banner 28s infinite linear; }
     .cuerpo .carrusel .banner-content {
       width: 100%;
       height: 100%;
       color: #fff;
-      background-color: rgba(0, 0, 0, 0.6);
+      background: linear-gradient(90deg, black 0%, rgba(0, 0, 0, 0.902398) 3%, rgba(0, 0, 0, 0) 100%);
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -52,22 +53,29 @@ header {
       .cuerpo .carrusel .banner-content .info h1 {
         font-family: "Roboto Slab", serif;
         font-weight: 800;
-        font-size: 25px;
+        font-size: 50px;
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 50%; }
+        width: 50%;
+        color: #ffd700; }
       .cuerpo .carrusel .banner-content .info p {
         font-family: "Roboto Slab", serif;
         width: 50%;
         font-weight: 400;
-        text-align: center; }
+        text-align: center;
+        font-size: 25px;
+        color: #ffd700; }
   .cuerpo .vendedores {
+    grid-area: "vendedores";
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
-    border: 5px solid red; }
+    flex-wrap: wrap; }
+    .cuerpo .vendedores h5 {
+      color: #ffd700;
+      font-size: 50px;
+      text-align: center; }
     .cuerpo .vendedores .card {
       margin: 1rem;
       background-color: #ffd700;
@@ -96,7 +104,10 @@ header {
           background: #ffd700;
           border-radius: 15px;
           box-shadow: 10px 10px 5px 0px #000000;
-          text-align: center; }
+          text-align: center;
+          font-family: "Roboto Slab", serif; }
+          .cuerpo .vendedores .container .swiper-wrapper .swiper-slide .card-title {
+            color: #000000; }
           .cuerpo .vendedores .container .swiper-wrapper .swiper-slide img {
             display: block;
             width: 100%;
@@ -117,10 +128,11 @@ header {
       .cuerpo .vendedores .container .swiper-button-prev {
         left: 26px !important; }
   .cuerpo .hacemos {
+    grid-area: "hacemos";
     display: flex;
     align-items: center;
     height: 100vh;
-    border: 5px solid red; }
+    border-top: 3px solid #ffd700; }
     .cuerpo .hacemos .why {
       display: flex;
       flex-direction: column;
@@ -143,18 +155,20 @@ header {
           font-size: 30px; }
         .cuerpo .hacemos .why .why-2 p {
           font-weight: 400;
-          font-size: 18px; }
+          font-size: 18px;
+          font-weight: 500; }
       .cuerpo .hacemos .why .video {
         display: flex;
         justify-content: center;
         align-items: center; }
   .cuerpo .servicios {
+    grid-area: "servicios";
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     background-color: #fff;
-    border: 5px solid red;
     width: 100%;
     height: 80vh; }
     .cuerpo .servicios h3 {
@@ -172,10 +186,71 @@ header {
           display: flex;
           align-items: center; }
   .cuerpo .ubicacion {
+    grid-area: "ubicacion";
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     width: 100%;
+    height: 100vh; }
+    .cuerpo .ubicacion h3 {
+      color: #ffd700;
+      font-size: 50px;
+      margin-left: 20%; }
+    .cuerpo .ubicacion .cont-ubi {
+      display: flex;
+      justify-content: space-around;
+      align-items: center; }
+      .cuerpo .ubicacion .cont-ubi .date {
+        color: #ffd700;
+        font-size: 25px; }
+  .cuerpo .presupuesto {
+    grid-area: "presupuesto";
+    display: flex;
     height: 100vh;
-    border: 5px solid red; }
+    background-color: #ffd700;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 10px 5px 0 black; }
+    .cuerpo .presupuesto .info {
+      color: #19284C;
+      width: 40%;
+      text-align: start; }
+      .cuerpo .presupuesto .info h3 {
+        font-size: 50px;
+        color: #19284C;
+        font-weight: 800; }
+      .cuerpo .presupuesto .info p {
+        font-size: 25px; }
+    .cuerpo .presupuesto form {
+      display: grid;
+      grid-template-areas: "conteiner3 conteiner4" "mensaje mensaje" "buttom buttom"; }
+      .cuerpo .presupuesto form .conteiner3 {
+        grid-area: conteiner3;
+        margin-right: 10px; }
+        .cuerpo .presupuesto form .conteiner3 .formulario {
+          display: flex;
+          flex-direction: column; }
+          .cuerpo .presupuesto form .conteiner3 .formulario input {
+            border-radius: 8px;
+            background-color: #ffff60;
+            height: 33px; }
+      .cuerpo .presupuesto form .conteiner4 {
+        grid-area: conteiner4; }
+        .cuerpo .presupuesto form .conteiner4 .formulario {
+          display: flex;
+          flex-direction: column; }
+        .cuerpo .presupuesto form .conteiner4 input {
+          border-radius: 8px;
+          background-color: #ffff60;
+          height: 33px; }
+        .cuerpo .presupuesto form .conteiner4 select {
+          background-color: #ffff60; }
+      .cuerpo .presupuesto form .mensaje {
+        grid-area: mensaje; }
+        .cuerpo .presupuesto form .mensaje textarea {
+          background-color: #ffff60; }
+      .cuerpo .presupuesto form .buttom {
+        grid-area: buttom; }
 
 @keyframes banner {
   0% {
@@ -197,6 +272,25 @@ header {
 
 #pie {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  height: 100px;
-  background-color: #ffd700; }
+  height: 150px;
+  background-color: #ffd700;
+  padding: 1em 0; }
+  #pie div h4 {
+    color: #19284C; }
+  #pie ul {
+    display: flex;
+    text-align: center; }
+    #pie ul li {
+      display: inline-block;
+      margin: 20px; }
+      #pie ul li a {
+        text-decoration: none;
+        font-family: "Roboto Slab", serif;
+        color: #19284C; }
+        #pie ul li a img {
+          width: 40px;
+          height: 40px; }
