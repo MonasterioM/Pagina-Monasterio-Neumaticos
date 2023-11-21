@@ -34,7 +34,7 @@
                 h1{
                     font-family: $font;
                     font-weight: 800;
-                    font-size: 50px;
+                    font-size: 35px;
                     display: flex;
                     justify-content: center;
                     align-items: center;
@@ -46,7 +46,7 @@
                     width: 50%;
                     font-weight: 400;
                     text-align: center;
-                    font-size: 25px;
+                    font-size: 20px;
                     color: $color-secundario;
                 }
             }
@@ -300,6 +300,18 @@
             }
             .buttom{
                 grid-area: buttom;
+                input{
+                    background-color: $color-primary;
+                    color: white;
+                    padding: 5px;
+                    border-radius: 5px;
+                    margin: 10px;
+                    &:hover{
+                        box-shadow: 0 5px 15px black;
+                        transform: translateY(-3px);
+                    }
+                }
+
             }
         }
         box-shadow: 0 10px 5px 0 black;

@@ -53,7 +53,7 @@ header {
       .cuerpo .carrusel .banner-content .info h1 {
         font-family: "Roboto Slab", serif;
         font-weight: 800;
-        font-size: 50px;
+        font-size: 35px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -64,7 +64,7 @@ header {
         width: 50%;
         font-weight: 400;
         text-align: center;
-        font-size: 25px;
+        font-size: 20px;
         color: #ffd700; }
   .cuerpo .vendedores {
     grid-area: "vendedores";
@@ -266,6 +266,15 @@ header {
           background-color: #ffff60; }
       .cuerpo .presupuesto form .buttom {
         grid-area: buttom; }
+        .cuerpo .presupuesto form .buttom input {
+          background-color: #19284C;
+          color: white;
+          padding: 5px;
+          border-radius: 5px;
+          margin: 10px; }
+          .cuerpo .presupuesto form .buttom input:hover {
+            box-shadow: 0 5px 15px black;
+            transform: translateY(-3px); }
 
 @keyframes banner {
   0% {
