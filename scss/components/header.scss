@@ -2,53 +2,105 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&family=Roboto+Slab&display=swap');
 
 header {
-  background-color: #ffd900;
-  width: 100%;
-  height: 5rem;
-  padding-left: 5rem;
-  padding-right: 5rem;
-  display: flex;
-  justify-content: space-between ;
-  align-items: center;
-    .logo {
-      a {
-        img {
-          width: 150px;
-          height: 42.86px;
-        }
-      }
-    }
-
-  nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 100%;
-    .menu-btn-close{
-      display: block;
-    }
-      div {
+    background-color: #ffd900;
+    width: 100%;
+    position: sticky;
+    top: 0px;
+    height: 5rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    z-index: 2;
+    .logo {
         a {
-          font-family: $font;
-          font-size: 15px;
-          text-decoration: underline;
-          color: $color-primary;
-          margin: 5px;
+            img {
+                width: 150px;
+                height: 42.86px;
+            }
         }
-      }
-  }
+    }
+
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+
+        .menu-btn-close {
+            display: none;
+        }
+
+        ul {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            list-style: none;
+            margin-bottom: 0px;
+
+            li {
+                margin: 5px 5px;
+                border-radius: 15px;
+
+                a {
+                    font-family: $font;
+                    font-size: 13px;
+                    text-decoration: none;
+                    color: $color-primary;
+                    margin: 0px;
+                    font-weight: normal;
+                    padding-bottom: 5px;
+                    border-bottom: 2px solid $color-primary;
+                    padding-top: 5px;
+                    padding-left: 2px;
+                    padding-right: 2px;
+                    border-radius: 4px;
+                }
+            }
+        }
+    }
+
+    .btn-menu-toggle {
+        display: none;
+    }
+
+    .fondo-opaciti {
+        display: none;
+    }
+
 }
 
 
 
-@media (max-width: 950px) {
-
-nav {
-  background-color: red;
-  .menu-btn-close{
-    display: none;
-    background-color: aqua;
-  }
+a:hover {
+    font-weight: bold;
+    background-color: yellow;
+    border-bottom: 3px solid $color-primary;
 }
+
+
+
+
+
+
+@media (max-width: 818px) {
+
+
+    
+
+    .menu-btn-close {
+        display: block !important;
+    }
+
+    .btn-menu-toggle {
+        display: block !important;
+    }
+
+    nav .toggle {
+        position: fixed;
+        right: -1000px;
+    }
 
 }

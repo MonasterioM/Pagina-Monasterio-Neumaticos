@@ -7,14 +7,17 @@
   box-sizing: border-box; }
 
 header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   background-color: #ffd900;
   width: 100%;
+  position: sticky;
+  top: 0px;
   height: 5rem;
   padding-left: 5rem;
   padding-right: 5rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center; }
+  z-index: 2; }
   header .logo a img {
     width: 150px;
     height: 42.86px; }
@@ -24,20 +27,47 @@ header {
     align-items: center;
     height: 100%; }
     header nav .menu-btn-close {
-      display: block; }
-    header nav div a {
-      font-family: "Roboto Slab", serif;
-      font-size: 15px;
-      text-decoration: underline;
-      color: #19284C;
-      margin: 5px; }
+      display: none; }
+    header nav ul {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      list-style: none;
+      margin-bottom: 0px; }
+      header nav ul li {
+        margin: 5px 5px;
+        border-radius: 15px; }
+        header nav ul li a {
+          font-family: "Roboto Slab", serif;
+          font-size: 13px;
+          text-decoration: none;
+          color: #19284C;
+          margin: 0px;
+          font-weight: normal;
+          padding-bottom: 5px;
+          border-bottom: 2px solid #19284C;
+          padding-top: 5px;
+          padding-left: 2px;
+          padding-right: 2px;
+          border-radius: 4px; }
+  header .btn-menu-toggle {
+    display: none; }
+  header .fondo-opaciti {
+    display: none; }
 
-@media (max-width: 950px) {
-  nav {
-    background-color: red; }
-    nav .menu-btn-close {
-      display: none;
-      background-color: aqua; } }
+a:hover {
+  font-weight: bold;
+  background-color: yellow;
+  border-bottom: 3px solid #19284C; }
+
+@media (max-width: 818px) {
+  .menu-btn-close {
+    display: block !important; }
+  .btn-menu-toggle {
+    display: block !important; }
+  nav .toggle {
+    position: fixed;
+    right: -1000px; } }
 
 .cuerpo {
   display: grid;
