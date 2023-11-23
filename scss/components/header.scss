@@ -2,82 +2,85 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&family=Roboto+Slab&display=swap');
 
 header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffd900;
+  width: 100%;
+  position: sticky;
+  top: 0px;
+  height: 5rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  z-index: 2;
+
+  .logo {
+    a {
+      img {
+        width: 150px;
+        height: 42.86px;
+      }
+    }
+  }
+
+
+  nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #ffd900;
-    width: 100%;
-    position: sticky;
-    top: 0px;
-    height: 5rem;
-    padding-left: 5rem;
-    padding-right: 5rem;
-    z-index: 2;
-    .logo {
+    height: 100%;
+
+    .btn-menu-close {
+      display: none;
+    }
+
+    ul {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      list-style: none;
+      margin-bottom: 0px;
+
+      li {
+        margin: 5px 5px;
+        border-radius: 15px;
+
         a {
-            img {
-                width: 150px;
-                height: 42.86px;
-            }
+          font-family: $font;
+          font-size: 13px;
+          text-decoration: none;
+          color: $color-primary;
+          margin: 0px;
+          font-weight: normal;
+          padding-bottom: 5px;
+          border-bottom: 2px solid $color-primary;
+          padding-top: 5px;
+          padding-left: 2px;
+          padding-right: 2px;
+          border-radius: 4px;
         }
+      }
     }
+  }
+
+  .btn-menu-toggle {
+    display: none !important;
+  }
 
 
-    nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        height: 100%;
 
-        .menu-btn-close {
-            display: none;
-        }
-
-        ul {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            list-style: none;
-            margin-bottom: 0px;
-
-            li {
-                margin: 5px 5px;
-                border-radius: 15px;
-
-                a {
-                    font-family: $font;
-                    font-size: 13px;
-                    text-decoration: none;
-                    color: $color-primary;
-                    margin: 0px;
-                    font-weight: normal;
-                    padding-bottom: 5px;
-                    border-bottom: 2px solid $color-primary;
-                    padding-top: 5px;
-                    padding-left: 2px;
-                    padding-right: 2px;
-                    border-radius: 4px;
-                }
-            }
-        }
-    }
-
-    .btn-menu-toggle {
-        display: none;
-    }
-
-    .fondo-opaciti {
-        display: none;
-    }
+  .fondo-opaciti {
+    display: none;
+  }
 
 }
 
 
 
-a:hover {
-    font-weight: bold;
-    background-color: yellow;
-    border-bottom: 3px solid $color-primary;
+.link-nav:hover {
+  font-weight: bold;
+  background-color: yellow;
+  border-bottom: 3px solid $color-primary;
 }
 
 
@@ -87,20 +90,92 @@ a:hover {
 
 @media (max-width: 818px) {
 
+  header {
+    padding-left: 1rem;
+    padding-right: 1rem;
 
-    
+    nav {
+      background-color: #ffd900;
+      position: fixed;
+      right: 0px;
+      bottom: 0px;
+      width: 250px;
+      height: 100%;
+      z-index: 1;
 
-    .menu-btn-close {
+
+      .nav-1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 320px;
+
+        li {
+          margin-top: 10px;
+        }
+
+      }
+      
+      .btn-menu-close {
+        display: block;
+        background-color: yellow;
+        position: absolute;
+        top: 7px;
+        right: 7px;
+        padding-left: 8px;
+        padding-right: 8px;
+        border: none;
+        border-radius: 7px;
+
+      }
+
+      .menu-btn-close {
         display: block !important;
+      }
     }
+
+    .active-div {
+      display: block !important;
+    }
+
+    .fondo-opaciti {
+      display: none;
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      background: rgba(0, 0, 0, 0.537);
+
+    }
+
 
     .btn-menu-toggle {
-        display: block !important;
+      display: block !important;
+      background-color: inherit;
+      border: none;
+      .icon path{
+        color: $color-primary;
+      }
     }
 
-    nav .toggle {
-        position: fixed;
-        right: -1000px;
-    }
+
+  }
+
+
+  nav.toggle {
+    right: -1000px;
+  }
+
+
+
+
+
+
+  .btn-menu-toggle {
+    display: block !important;
+  }
+
 
 }

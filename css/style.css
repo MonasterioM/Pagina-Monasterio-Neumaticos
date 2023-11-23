@@ -26,7 +26,7 @@ header {
     justify-content: space-between;
     align-items: center;
     height: 100%; }
-    header nav .menu-btn-close {
+    header nav .btn-menu-close {
       display: none; }
     header nav ul {
       display: flex;
@@ -51,23 +51,67 @@ header {
           padding-right: 2px;
           border-radius: 4px; }
   header .btn-menu-toggle {
-    display: none; }
+    display: none !important; }
   header .fondo-opaciti {
     display: none; }
 
-a:hover {
+.link-nav:hover {
   font-weight: bold;
   background-color: yellow;
   border-bottom: 3px solid #19284C; }
 
 @media (max-width: 818px) {
-  .menu-btn-close {
-    display: block !important; }
+  header {
+    padding-left: 1rem;
+    padding-right: 1rem; }
+    header nav {
+      background-color: #ffd900;
+      position: fixed;
+      right: 0px;
+      bottom: 0px;
+      width: 250px;
+      height: 100%;
+      z-index: 1; }
+      header nav .nav-1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 320px; }
+        header nav .nav-1 li {
+          margin-top: 10px; }
+      header nav .btn-menu-close {
+        display: block;
+        background-color: yellow;
+        position: absolute;
+        top: 7px;
+        right: 7px;
+        padding-left: 8px;
+        padding-right: 8px;
+        border: none;
+        border-radius: 7px; }
+      header nav .menu-btn-close {
+        display: block !important; }
+    header .active-div {
+      display: block !important; }
+    header .fondo-opaciti {
+      display: none;
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      background: rgba(0, 0, 0, 0.537); }
+    header .btn-menu-toggle {
+      display: block !important;
+      background-color: inherit;
+      border: none; }
+      header .btn-menu-toggle .icon path {
+        color: #19284C; }
+  nav.toggle {
+    right: -1000px; }
   .btn-menu-toggle {
-    display: block !important; }
-  nav .toggle {
-    position: fixed;
-    right: -1000px; } }
+    display: block !important; } }
 
 .cuerpo {
   display: grid;
