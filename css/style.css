@@ -117,12 +117,14 @@ header {
   display: grid;
   background-color: #19284C;
   font-family: "Roboto Slab", serif;
-  grid-template-areas: "carrusel"  "vendedores" "hacemos" "servicios" "ubicacion" "presupuesto"; }
+  min-height: 100vh;
+  grid: "carrusel" 1fr  "vendedores"  1fr   /     100%; }
   .cuerpo .carrusel {
     grid-area: carrusel;
     position: relative;
     width: 100%;
     height: 80vh;
+    background-image: url(../img/carrusel1.jpg);
     background-position: center;
     background-size: cover;
     transition: all .1s ease-in-out;
@@ -168,7 +170,7 @@ header {
       text-align: center; }
     .cuerpo .vendedores .card {
       position: relative;
-      width: 300px;
+      max-width: 300px;
       height: 430px;
       background-color: #cecece;
       border-radius: 10px;
@@ -229,139 +231,6 @@ header {
       .cuerpo .vendedores .card:hover {
         box-shadow: 0 5px 15px black;
         transform: translateY(-15px); }
-  .cuerpo .hacemos {
-    grid-area: "hacemos";
-    display: flex;
-    align-items: center;
-    height: 100vh;
-    background-color: #ffd700; }
-    .cuerpo .hacemos .why {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      width: 50%; }
-      .cuerpo .hacemos .why .why-2 {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        background-color: #ffd700;
-        border-radius: 15px;
-        height: 400px;
-        width: 400px;
-        text-align: center;
-        color: #1928c4;
-        box-shadow: 5px 5px 15px 0px black; }
-        .cuerpo .hacemos .why .why-2 h5 {
-          font-weight: 800;
-          font-size: 30px; }
-        .cuerpo .hacemos .why .why-2 p {
-          font-weight: 400;
-          font-size: 18px;
-          font-weight: 500; }
-      .cuerpo .hacemos .why .video {
-        display: flex;
-        justify-content: center;
-        align-items: center; }
-  .cuerpo .servicios {
-    grid-area: "servicios";
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    background-color: #fff;
-    width: 100%;
-    height: 80vh; }
-    .cuerpo .servicios h3 {
-      color: #19284C;
-      font-size: 60px; }
-    .cuerpo .servicios .cards-contenedor {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap; }
-      .cuerpo .servicios .cards-contenedor .card-contenedor {
-        background-color: #ffd700;
-        margin: 20px; }
-        .cuerpo .servicios .cards-contenedor .card-contenedor div .img {
-          display: flex;
-          align-items: center; }
-  .cuerpo .ubicacion {
-    grid-area: "ubicacion";
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-    height: 100vh; }
-    .cuerpo .ubicacion h3 {
-      color: #ffd700;
-      font-size: 50px;
-      margin-left: 20%; }
-    .cuerpo .ubicacion .cont-ubi {
-      display: flex;
-      justify-content: space-around;
-      align-items: center; }
-      .cuerpo .ubicacion .cont-ubi .date {
-        color: #ffd700;
-        font-size: 25px; }
-  .cuerpo .presupuesto {
-    grid-area: "presupuesto";
-    display: flex;
-    height: 100vh;
-    background-color: #ffd700;
-    justify-content: space-around;
-    align-items: center;
-    box-shadow: 0 10px 5px 0 black; }
-    .cuerpo .presupuesto .info {
-      color: #19284C;
-      width: 40%;
-      text-align: start; }
-      .cuerpo .presupuesto .info h3 {
-        font-size: 50px;
-        color: #19284C;
-        font-weight: 800; }
-      .cuerpo .presupuesto .info p {
-        font-size: 25px; }
-    .cuerpo .presupuesto form {
-      display: grid;
-      grid-template-areas: "conteiner3 conteiner4" "mensaje mensaje" "buttom buttom"; }
-      .cuerpo .presupuesto form .conteiner3 {
-        grid-area: conteiner3;
-        margin-right: 10px; }
-        .cuerpo .presupuesto form .conteiner3 .formulario {
-          display: flex;
-          flex-direction: column; }
-          .cuerpo .presupuesto form .conteiner3 .formulario input {
-            border-radius: 8px;
-            background-color: #ffff60;
-            height: 33px; }
-      .cuerpo .presupuesto form .conteiner4 {
-        grid-area: conteiner4; }
-        .cuerpo .presupuesto form .conteiner4 .formulario {
-          display: flex;
-          flex-direction: column; }
-        .cuerpo .presupuesto form .conteiner4 input {
-          border-radius: 8px;
-          background-color: #ffff60;
-          height: 33px; }
-        .cuerpo .presupuesto form .conteiner4 select {
-          background-color: #ffff60; }
-      .cuerpo .presupuesto form .mensaje {
-        grid-area: mensaje; }
-        .cuerpo .presupuesto form .mensaje textarea {
-          background-color: #ffff60; }
-      .cuerpo .presupuesto form .buttom {
-        grid-area: buttom; }
-        .cuerpo .presupuesto form .buttom input {
-          background-color: #19284C;
-          color: white;
-          padding: 5px;
-          border-radius: 5px;
-          margin: 10px; }
-          .cuerpo .presupuesto form .buttom input:hover {
-            box-shadow: 0 5px 15px black;
-            transform: translateY(-3px); }
 
 #pie {
   display: flex;

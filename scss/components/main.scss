@@ -3,148 +3,161 @@
     display: grid;
     background-color: $color-primary;
     font-family: $font;
-    grid-template-areas: 
-    "carrusel" 
-    "vendedores"
-    "hacemos"
-    "servicios"
-    "ubicacion"
-    "presupuesto";
-//     .carrusel{
-//         grid-area: carrusel;
-//         position: relative;
-//         width: 100%;
-//         height: 80vh;
-//         // background-image: url(../img/carrusel1.jpg);
-//         background-position: center;
-//         background-size: cover;
-//         transition: all .1s ease-in-out;
-//         animation: banner 28s infinite linear;
-//         .banner-content{
-//             width: 100%;
-//             height: 100%;
-//             color: #fff;
-//             background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.9023984593837535) 3%, rgba(0,0,0,0) 100%);
-//             display: flex;
-//             flex-direction: column;
-//             justify-content: center;
-//             align-items: center;
-//             text-align: center;
-//             .info{
-//                 h1{
-//                     font-family: $font;
-//                     font-weight: 800;
-//                     font-size: 35px;
-//                     display: flex;
-//                     justify-content: center;
-//                     align-items: center;
-//                     width: 50%;
-//                     color: $color-secundario;
-//                 }
-//                 p{
-//                     font-family: $font;
-//                     width: 50%;
-//                     font-weight: 400;
-//                     text-align: center;
-//                     font-size: 20px;
-//                     color: $color-secundario;
-//                 }
-//             }
-//         }
-//     }
-//     .vendedores{
-//         grid-area: "vendedores";
-//         background-color: $color-primary;
-//         width: 100%;
-//         height: 80vh;
-//         display: flex;
-//         justify-content: space-around;
-//         align-items: center;
-//         flex-wrap: wrap;
-//         h5{
-//             color: $color-secundario;
-//             font-size: 50px;
-//             text-align: center;
-//         }
-//         .card{
-//             position: relative;
-//             width: 300px;
-//             height: 430px;
-//             background-color: #cecece;
-//             border-radius: 10px;
-//             overflow: hidden;
-//             .head{
-//                 height: 125px;
-//                 width: 100%;
-//                 position: relative;
+    min-height: 100vh;
+    // grid-template-areas: 
+    // "carrusel" 
+    // "vendedores"
+    // "hacemos"
+    // "servicios"
+    // "ubicacion"
+    // "presupuesto";
+
+
+        grid: 
+         "carrusel" 1fr 
+         "vendedores"  1fr   /    
+            100%
+        ;
+
+        //  .carrusel{
+        //     grid-area: carrusel;
+        //     background-color: red;
+        // }
+    .carrusel{
+        grid-area: carrusel;
+        position: relative;
+        width: 100%;
+        height: 80vh;
+        background-image: url(../img/carrusel1.jpg);
+        background-position: center;
+        background-size: cover;
+        transition: all .1s ease-in-out;
+        animation: banner 28s infinite linear;
+        .banner-content{
+            width: 100%;
+            height: 100%;
+            color: #fff;
+            background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.9023984593837535) 3%, rgba(0,0,0,0) 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            .info{
+                h1{
+                    font-family: $font;
+                    font-weight: 800;
+                    font-size: 35px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 50%;
+                    color: $color-secundario;
+                }
+                p{
+                    font-family: $font;
+                    width: 50%;
+                    font-weight: 400;
+                    text-align: center;
+                    font-size: 20px;
+                    color: $color-secundario;
+                }
+            }
+        }
+    }
+    .vendedores{
+        grid-area: "vendedores";
+        background-color: $color-primary;
+        width: 100%;
+        height: 80vh;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        h5{
+            color: $color-secundario;
+            font-size: 50px;
+            text-align: center;
+        }
+        .card{
+            position: relative;
+            max-width: 300px;
+            height: 430px;
+            background-color: #cecece;
+            border-radius: 10px;
+            overflow: hidden;
+            .head{
+                height: 125px;
+                width: 100%;
+                position: relative;
                 
-//                 .circle{
-//                     position: absolute;
-//                     width: 300px;
-//                     height: 300px;
-//                     border-radius: 50%;
-//                     background-color: $color-secundario;
-//                     bottom: 0;
-//                 }
-//                 .perfil{
-//                     width: 150px;
-//                     height: 150px;
-//                     position: absolute;
-//                     background-color: #fff;
-//                     padding: 5px;
-//                     border-radius: 50%;
-//                     bottom: -50%;
-//                     left: 50%;
-//                     transform: translate(-50%);
-//                     img{
-//                         width: 100%;
-//                         height: 100%;
-//                         border-radius: 50%;
-//                         object-fit: cover;
-//                     }
-//                 }
-//             }
-//             .description{
-//                 height: 300px;
-//                 padding: 40px 20px 20px 20px;
-//                 border-bottom: solid 5px $color-primary;
-//                 text-align: center;
-//                 h3{
-//                     color: #000000;
-//                 }
-//                 h4{
-//                     color: $color-primary;
-//                 }
-//                 p{
-//                     color: rgb(0, 0, 0);
-//                     font-size: 15px;
-//                 }
-//             }
-//             .contact{
-//                 width: 100%;
-//                 height: 75px;
-//                 display: flex;
-//                 align-items: center;
-//                 justify-content: center;
-//                 a{
-//                     text-decoration: none;
-//                     color: $color-primary;
-//                     background-color: $color-secundario;
-//                     padding: 5px 20px;
-//                     border-radius: 5px;
-//                     transition: .3s;
-//                     &:hover{
-//                         background-color: #ffff60;
-//                     }
-//                 }
-//             }
-//             &:hover{
-//                 box-shadow: 0 5px 15px black;
-//                 transform: translateY(-15px);
-//             }
-//         }
+                .circle{
+                    position: absolute;
+                    width: 300px;
+                    height: 300px;
+                    border-radius: 50%;
+                    background-color: $color-secundario;
+                    bottom: 0;
+                }
+                .perfil{
+                    width: 150px;
+                    height: 150px;
+                    position: absolute;
+                    background-color: #fff;
+                    padding: 5px;
+                    border-radius: 50%;
+                    bottom: -50%;
+                    left: 50%;
+                    transform: translate(-50%);
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 50%;
+                        object-fit: cover;
+                    }
+                }
+            }
+            .description{
+                height: 300px;
+                padding: 40px 20px 20px 20px;
+                border-bottom: solid 5px $color-primary;
+                text-align: center;
+                h3{
+                    color: #000000;
+                }
+                h4{
+                    color: $color-primary;
+                }
+                p{
+                    color: rgb(0, 0, 0);
+                    font-size: 15px;
+                }
+            }
+            .contact{
+                width: 100%;
+                height: 75px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                a{
+                    text-decoration: none;
+                    color: $color-primary;
+                    background-color: $color-secundario;
+                    padding: 5px 20px;
+                    border-radius: 5px;
+                    transition: .3s;
+                    &:hover{
+                        background-color: #ffff60;
+                    }
+                }
+            }
+            &:hover{
+                box-shadow: 0 5px 15px black;
+                transform: translateY(-15px);
+            }
+        }
         
-//     }
+    }
 //     .hacemos{
 //             grid-area: "hacemos";
 //             display: flex;
@@ -316,7 +329,7 @@
 //         }
 //         box-shadow: 0 10px 5px 0 black;
 //     }
-// }
+}
 
 // @keyframes banner {
 //     0%{
