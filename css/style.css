@@ -43,7 +43,7 @@ header {
           text-decoration: none;
           color: #19284C;
           margin: 0px;
-          font-weight: normal;
+          font-weight: 500;
           padding-bottom: 5px;
           border-bottom: 2px solid #19284C;
           padding-top: 5px;
@@ -113,48 +113,126 @@ header {
   .btn-menu-toggle {
     display: block !important; } }
 
+.carrusel {
+  grid-area: carrusel;
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  background-image: url(../img/carrusel1.jpg);
+  background-position: center;
+  background-size: cover;
+  transition: all .1s ease-in-out;
+  animation: banner 28s infinite linear; }
+  .carrusel .banner-content {
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    background: linear-gradient(90deg, black 0%, rgba(0, 0, 0, 0.902398) 3%, rgba(0, 0, 0, 0) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center; }
+    .carrusel .banner-content .info h1 {
+      font-family: "Roboto Slab", serif;
+      font-weight: 800;
+      font-size: 35px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50%;
+      color: #ffd700; }
+    .carrusel .banner-content .info p {
+      font-family: "Roboto Slab", serif;
+      width: 50%;
+      font-weight: 400;
+      text-align: center;
+      font-size: 16px;
+      color: #ffd700; }
+
+.vendedores {
+  grid-area: "vendedores";
+  background-color: #19284C;
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap; }
+  .vendedores h5 {
+    color: #ffd700;
+    font-size: 50px;
+    text-align: center; }
+  .vendedores .card {
+    position: relative;
+    max-width: 300px;
+    height: 430px;
+    background-color: #cecece;
+    border-radius: 10px;
+    overflow: hidden; }
+    .vendedores .card .head {
+      height: 125px;
+      width: 100%;
+      position: relative; }
+      .vendedores .card .head .circle {
+        position: absolute;
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        background-color: #ffd700;
+        bottom: 0; }
+      .vendedores .card .head .perfil {
+        width: 150px;
+        height: 150px;
+        position: absolute;
+        background-color: #fff;
+        padding: 5px;
+        border-radius: 50%;
+        bottom: -50%;
+        left: 50%;
+        transform: translate(-50%); }
+        .vendedores .card .head .perfil img {
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+          object-fit: cover; }
+    .vendedores .card .description {
+      height: 300px;
+      padding: 40px 20px 20px 20px;
+      border-bottom: solid 5px #19284C;
+      text-align: center; }
+      .vendedores .card .description h3 {
+        color: #000000; }
+      .vendedores .card .description h4 {
+        color: #19284C; }
+      .vendedores .card .description p {
+        color: black;
+        font-size: 15px; }
+    .vendedores .card .contact {
+      width: 100%;
+      height: 75px;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+      .vendedores .card .contact a {
+        text-decoration: none;
+        color: #19284C;
+        background-color: #ffd700;
+        padding: 5px 20px;
+        border-radius: 5px;
+        transition: .3s; }
+        .vendedores .card .contact a:hover {
+          background-color: #ffff60; }
+    .vendedores .card:hover {
+      box-shadow: 0 5px 15px black;
+      transform: translateY(-15px); }
+
 .cuerpo {
   display: grid;
   background-color: #19284C;
   font-family: "Roboto Slab", serif;
   min-height: 100vh;
   grid: "carrusel" 1fr  "vendedores"  1fr   /     100%; }
-  .cuerpo .carrusel {
-    grid-area: carrusel;
-    position: relative;
-    width: 100%;
-    height: 80vh;
-    background-image: url(../img/carrusel1.jpg);
-    background-position: center;
-    background-size: cover;
-    transition: all .1s ease-in-out;
-    animation: banner 28s infinite linear; }
-    .cuerpo .carrusel .banner-content {
-      width: 100%;
-      height: 100%;
-      color: #fff;
-      background: linear-gradient(90deg, black 0%, rgba(0, 0, 0, 0.902398) 3%, rgba(0, 0, 0, 0) 100%);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center; }
-      .cuerpo .carrusel .banner-content .info h1 {
-        font-family: "Roboto Slab", serif;
-        font-weight: 800;
-        font-size: 35px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 50%;
-        color: #ffd700; }
-      .cuerpo .carrusel .banner-content .info p {
-        font-family: "Roboto Slab", serif;
-        width: 50%;
-        font-weight: 400;
-        text-align: center;
-        font-size: 20px;
-        color: #ffd700; }
   .cuerpo .vendedores {
     grid-area: "vendedores";
     background-color: #19284C;
@@ -231,6 +309,24 @@ header {
       .cuerpo .vendedores .card:hover {
         box-shadow: 0 5px 15px black;
         transform: translateY(-15px); }
+
+@keyframes banner {
+  0% {
+    background-image: url(../img/carrusel1.jpg); }
+  25% {
+    background-image: url(../img/carrusel1.jpg); }
+  26% {
+    background-image: url(../img/carrusel2.jpg); }
+  50% {
+    background-image: url(../img/carrusel2.jpg); }
+  51% {
+    background-image: url(../img/carrusel3.jpg); }
+  75% {
+    background-image: url(../img/carrusel3.jpg); }
+  76% {
+    background-image: url(../img/WhatsApp_); }
+  100% {
+    background-image: url(../img/WhatsApp_); } }
 
 #pie {
   display: flex;

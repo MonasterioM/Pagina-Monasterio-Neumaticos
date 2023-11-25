@@ -1,0 +1,78 @@
+//     .presupuesto{
+//         grid-area: "presupuesto";
+//         display: flex;
+//         height: 100vh;
+//         background-color: $color-secundario;
+//         justify-content: space-around;
+//         align-items: center;
+//         .info{
+//             color: $color-primary;
+//             width: 40%;
+//             text-align: start;
+//             h3{
+//                 font-size: 50px;
+//                 color: $color-primary;
+//                 font-weight: 800;
+//             }
+//             p{
+//                 font-size: 25px;
+//             }
+//         }
+//         form{
+//             display: grid;
+//             grid-template-areas: 
+//             "conteiner3 conteiner4"
+//             "mensaje mensaje"
+//             "buttom buttom";
+//             .conteiner3{
+//                 grid-area: conteiner3;
+//                 margin-right: 10px;
+//                 .formulario{
+//                     display: flex;
+//                     flex-direction: column;
+//                     input{
+//                         border-radius: 8px;
+//                         background-color: #ffff60;
+//                         height: 33px;
+//                     }
+//                 }                
+//             }
+//             .conteiner4{
+//                 grid-area: conteiner4;
+//                 .formulario{
+//                     display: flex;
+//                     flex-direction: column;
+//                 }
+//                 input{
+//                     border-radius: 8px;
+//                     background-color: #ffff60;
+//                     height: 33px;
+//                 }
+//                 select{
+//                     background-color: #ffff60;
+//                 }
+//             }
+//             .mensaje{
+//                 grid-area: mensaje;
+//                 textarea{
+//                     background-color: #ffff60;
+//                 }
+//             }
+//             .buttom{
+//                 grid-area: buttom;
+//                 input{
+//                     background-color: $color-primary;
+//                     color: white;
+//                     padding: 5px;
+//                     border-radius: 5px;
+//                     margin: 10px;
+//                     &:hover{
+//                         box-shadow: 0 5px 15px black;
+//                         transform: translateY(-3px);
+//                     }
+//                 }
+
+//             }
+//         }
+//         box-shadow: 0 10px 5px 0 black;
+//     }
