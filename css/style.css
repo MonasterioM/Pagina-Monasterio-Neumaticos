@@ -150,6 +150,51 @@ header {
       font-size: 16px;
       color: #ffd700; }
 
+@media (orientation: portrait) {
+  .carrusel {
+    height: 50vh; }
+    .carrusel .banner-content .info {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      font-size: 16px; } }
+
+.hacemos {
+  grid-area: "hacemos";
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  background-color: #ffd700; }
+  .hacemos .why {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%; }
+    .hacemos .why .why-2 {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background-color: #ffd700;
+      border-radius: 15px;
+      height: 400px;
+      width: 400px;
+      text-align: center;
+      color: #1928c4;
+      box-shadow: 5px 5px 15px 0px black; }
+      .hacemos .why .why-2 h5 {
+        font-weight: 800;
+        font-size: 30px; }
+      .hacemos .why .why-2 p {
+        font-weight: 400;
+        font-size: 18px;
+        font-weight: 500; }
+    .hacemos .why .video {
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+
 .vendedores {
   grid-area: "vendedores";
   background-color: #19284C;
@@ -227,88 +272,136 @@ header {
       box-shadow: 0 5px 15px black;
       transform: translateY(-15px); }
 
+@media (orientation: portrait) {
+  .vendedores {
+    display: flex;
+    flex-wrap: wrap; }
+    .vendedores .card {
+      width: 50vw;
+      height: 50vh; } }
+
+.ubicacion {
+  grid-area: "ubicacion";
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100vh; }
+  .ubicacion h3 {
+    color: #ffd700;
+    font-size: 50px;
+    margin-left: 20%; }
+  .ubicacion .cont-ubi {
+    display: flex;
+    justify-content: space-around;
+    align-items: center; }
+    .ubicacion .cont-ubi .date {
+      color: #ffd700;
+      font-size: 25px; }
+
+.servicios {
+  grid-area: "servicios";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: #fff;
+  width: 100%;
+  height: 80vh; }
+  .servicios h3 {
+    color: #19284C;
+    font-size: 60px; }
+  .servicios .cards-contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; }
+    .servicios .cards-contenedor .card {
+      display: flex;
+      background-color: #ffd700;
+      margin: 20px;
+      width: 520px; }
+      .servicios .cards-contenedor .card .img {
+        display: flex;
+        align-items: center; }
+      .servicios .cards-contenedor .card .card-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; }
+
+.presupuesto {
+  grid-area: "presupuesto";
+  display: flex;
+  height: 100vh;
+  background-color: #ffd700;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0 10px 5px 0 black; }
+  .presupuesto .info {
+    color: #19284C;
+    width: 40%;
+    text-align: start; }
+    .presupuesto .info h3 {
+      font-size: 50px;
+      color: #19284C;
+      font-weight: 800; }
+    .presupuesto .info p {
+      font-size: 25px; }
+  .presupuesto form {
+    display: grid;
+    grid-template-areas: "conteiner3 conteiner4" "mensaje mensaje" "buttom buttom"; }
+    .presupuesto form .conteiner3 {
+      grid-area: conteiner3;
+      margin-right: 10px; }
+      .presupuesto form .conteiner3 .formulario {
+        display: flex;
+        flex-direction: column; }
+        .presupuesto form .conteiner3 .formulario input {
+          border-radius: 8px;
+          background-color: #ffff60;
+          height: 33px; }
+    .presupuesto form .conteiner4 {
+      grid-area: conteiner4; }
+      .presupuesto form .conteiner4 .formulario {
+        display: flex;
+        flex-direction: column; }
+      .presupuesto form .conteiner4 input {
+        border-radius: 8px;
+        background-color: #ffff60;
+        height: 33px; }
+      .presupuesto form .conteiner4 select {
+        background-color: #ffff60;
+        height: 33px;
+        border-radius: 8px;
+        border: solid 2px; }
+    .presupuesto form .mensaje {
+      grid-area: mensaje; }
+      .presupuesto form .mensaje .formulario {
+        display: flex;
+        flex-direction: column; }
+        .presupuesto form .mensaje .formulario textarea {
+          background-color: #ffff60;
+          border-radius: 8px;
+          border: solid 2px; }
+    .presupuesto form .buttom {
+      grid-area: buttom; }
+      .presupuesto form .buttom input {
+        background-color: #19284C;
+        color: white;
+        padding: 5px;
+        border-radius: 5px;
+        margin: 10px; }
+        .presupuesto form .buttom input:hover {
+          box-shadow: 0 5px 15px black;
+          transform: translateY(-3px); }
+
 .cuerpo {
   display: grid;
   background-color: #19284C;
   font-family: "Roboto Slab", serif;
   min-height: 100vh;
   grid: "carrusel" 1fr  "vendedores"  1fr   /     100%; }
-  .cuerpo .vendedores {
-    grid-area: "vendedores";
-    background-color: #19284C;
-    width: 100%;
-    height: 80vh;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap; }
-    .cuerpo .vendedores h5 {
-      color: #ffd700;
-      font-size: 50px;
-      text-align: center; }
-    .cuerpo .vendedores .card {
-      position: relative;
-      max-width: 300px;
-      height: 430px;
-      background-color: #cecece;
-      border-radius: 10px;
-      overflow: hidden; }
-      .cuerpo .vendedores .card .head {
-        height: 125px;
-        width: 100%;
-        position: relative; }
-        .cuerpo .vendedores .card .head .circle {
-          position: absolute;
-          width: 300px;
-          height: 300px;
-          border-radius: 50%;
-          background-color: #ffd700;
-          bottom: 0; }
-        .cuerpo .vendedores .card .head .perfil {
-          width: 150px;
-          height: 150px;
-          position: absolute;
-          background-color: #fff;
-          padding: 5px;
-          border-radius: 50%;
-          bottom: -50%;
-          left: 50%;
-          transform: translate(-50%); }
-          .cuerpo .vendedores .card .head .perfil img {
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            object-fit: cover; }
-      .cuerpo .vendedores .card .description {
-        height: 300px;
-        padding: 40px 20px 20px 20px;
-        border-bottom: solid 5px #19284C;
-        text-align: center; }
-        .cuerpo .vendedores .card .description h3 {
-          color: #000000; }
-        .cuerpo .vendedores .card .description h4 {
-          color: #19284C; }
-        .cuerpo .vendedores .card .description p {
-          color: black;
-          font-size: 15px; }
-      .cuerpo .vendedores .card .contact {
-        width: 100%;
-        height: 75px;
-        display: flex;
-        align-items: center;
-        justify-content: center; }
-        .cuerpo .vendedores .card .contact a {
-          text-decoration: none;
-          color: #19284C;
-          background-color: #ffd700;
-          padding: 5px 20px;
-          border-radius: 5px;
-          transition: .3s; }
-          .cuerpo .vendedores .card .contact a:hover {
-            background-color: #ffff60; }
-      .cuerpo .vendedores .card:hover {
-        box-shadow: 0 5px 15px black;
-        transform: translateY(-15px); }
 
 @keyframes banner {
   0% {
@@ -347,6 +440,8 @@ header {
       margin: 20px; }
       #pie ul li a {
         text-decoration: none;
+        display: flex;
+        align-items: center;
         font-family: "Roboto Slab", serif;
         color: #19284C; }
         #pie ul li a img {
