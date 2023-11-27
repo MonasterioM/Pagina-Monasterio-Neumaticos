@@ -20,7 +20,7 @@
             display: flex;
             background-color: $color-secundario;
             margin: 20px;
-            width: 520px;
+            width: 480px;
                 .img{
                     display: flex;
                     align-items: center;
@@ -33,4 +33,25 @@
                 }
         }
     }
+}
+
+@media (orientation: portrait){
+
+    .servicios{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .h3{
+            text-align: center;
+        }
+        .cards-contenedor{
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            .card{
+                width: 100%;
+            }
+        }
+    }
+
 }

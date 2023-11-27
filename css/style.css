@@ -15,12 +15,12 @@ header {
   position: sticky;
   top: 0px;
   height: 5rem;
-  padding-left: 5rem;
-  padding-right: 5rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
   z-index: 2; }
   header .logo a img {
-    width: 150px;
-    height: 42.86px; }
+    width: 200px;
+    height: 57.14px; }
   header nav {
     display: flex;
     justify-content: space-between;
@@ -154,6 +154,7 @@ header {
   .carrusel {
     height: 50vh; }
     .carrusel .banner-content .info {
+      width: 600px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -191,9 +192,24 @@ header {
         font-size: 18px;
         font-weight: 500; }
     .hacemos .why .video {
+      position: absolute;
+      width: 100%;
+      height: 100%;
       display: flex;
       justify-content: center;
       align-items: center; }
+      .hacemos .why .video #vid {
+        width: 560px;
+        height: 315px; }
+
+@media (orientation: portrait) {
+  .hacemos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center; }
+    .hacemos .why .video {
+      width: 100px; } }
 
 .vendedores {
   grid-area: "vendedores";
@@ -211,7 +227,7 @@ header {
   .vendedores .card {
     position: relative;
     max-width: 300px;
-    height: 430px;
+    height: 450px;
     background-color: #cecece;
     border-radius: 10px;
     overflow: hidden; }
@@ -242,14 +258,16 @@ header {
           border-radius: 50%;
           object-fit: cover; }
     .vendedores .card .description {
-      height: 300px;
-      padding: 40px 20px 20px 20px;
-      border-bottom: solid 5px #19284C;
+      height: 250px;
+      padding: 80px 20px 20px 20px;
+      border-bottom: solid 3px #19284C;
       text-align: center; }
       .vendedores .card .description h3 {
         color: #000000; }
       .vendedores .card .description h4 {
         color: #19284C; }
+      .vendedores .card .description .indicadores {
+        color: rgba(0, 0, 0, 0.712); }
       .vendedores .card .description p {
         color: black;
         font-size: 15px; }
@@ -285,19 +303,44 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  flex-wrap: wrap;
   width: 100%;
   height: 100vh; }
   .ubicacion h3 {
     color: #ffd700;
-    font-size: 50px;
-    margin-left: 20%; }
+    font-size: 50px; }
   .ubicacion .cont-ubi {
     display: flex;
     justify-content: space-around;
-    align-items: center; }
+    align-items: center;
+    flex-wrap: wrap; }
+    .ubicacion .cont-ubi .ubi iframe {
+      width: 600px;
+      height: 400px; }
     .ubicacion .cont-ubi .date {
       color: #ffd700;
       font-size: 25px; }
+
+@media (orientation: portrait) {
+  .ubicacion {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    .ubicacion h3 {
+      text-align: center; }
+    .ubicacion .cont-ubi {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column; }
+      .ubicacion .cont-ubi .ubi {
+        width: 100%;
+        height: 50vh;
+        display: flex;
+        justify-content: center; }
+        .ubicacion .cont-ubi .ubi iframe {
+          width: 90%;
+          height: 200; } }
 
 .servicios {
   grid-area: "servicios";
@@ -320,7 +363,7 @@ header {
       display: flex;
       background-color: #ffd700;
       margin: 20px;
-      width: 520px; }
+      width: 480px; }
       .servicios .cards-contenedor .card .img {
         display: flex;
         align-items: center; }
@@ -329,6 +372,20 @@ header {
         flex-direction: column;
         justify-content: center;
         align-items: center; }
+
+@media (orientation: portrait) {
+  .servicios {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .servicios .h3 {
+      text-align: center; }
+    .servicios .cards-contenedor {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%; }
+      .servicios .cards-contenedor .card {
+        width: 100%; } }
 
 .presupuesto {
   grid-area: "presupuesto";
@@ -396,12 +453,26 @@ header {
           box-shadow: 0 5px 15px black;
           transform: translateY(-3px); }
 
+@media (orientation: portrait) {
+  .presupuesto {
+    display: flex;
+    flex-direction: column; }
+    .presupuesto .info {
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      width: 100%; }
+      .presupuesto .info .prep {
+        margin-bottom: 40px; } }
+
 .cuerpo {
   display: grid;
   background-color: #19284C;
   font-family: "Roboto Slab", serif;
   min-height: 100vh;
-  grid: "carrusel" 1fr  "vendedores"  1fr   /     100%; }
+  grid: "carrusel" 1fr  "vendedores"  1fr    "hacemos" "servicios" "ubicacion" "presupuesto"  /     100%; }
 
 @keyframes banner {
   0% {

@@ -15,7 +15,7 @@
     .card{
         position: relative;
         max-width: 300px;
-        height: 430px;
+        height: 450px;
         background-color: #cecece;
         border-radius: 10px;
         overflow: hidden;
@@ -51,15 +51,18 @@
             }
         }
         .description{
-            height: 300px;
-            padding: 40px 20px 20px 20px;
-            border-bottom: solid 5px $color-primary;
+            height: 250px;
+            padding: 80px 20px 20px 20px;
+            border-bottom: solid 3px $color-primary;
             text-align: center;
             h3{
                 color: #000000;
             }
             h4{
                 color: $color-primary;
+            }
+            .indicadores{
+                color: rgba(0, 0, 0, 0.712);
             }
             p{
                 color: rgb(0, 0, 0);
