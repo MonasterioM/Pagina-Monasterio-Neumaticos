@@ -18,10 +18,13 @@
         display: flex;
         text-align: center;
         li{
+            
             display: inline-block;
             margin: 20px;
             a{
                 text-decoration: none;
+                display: flex;
+                align-items: center;
                 font-family: $font;
                 color: $color-primary;
                 img{

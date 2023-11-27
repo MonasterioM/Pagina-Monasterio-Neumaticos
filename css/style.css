@@ -15,12 +15,12 @@ header {
   position: sticky;
   top: 0px;
   height: 5rem;
-  padding-left: 5rem;
-  padding-right: 5rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
   z-index: 2; }
   header .logo a img {
-    width: 150px;
-    height: 42.86px; }
+    width: 200px;
+    height: 57.14px; }
   header nav {
     display: flex;
     justify-content: space-between;
@@ -150,172 +150,330 @@ header {
       font-size: 16px;
       color: #ffd700; }
 
+@media (orientation: portrait) {
+  .carrusel {
+    height: 50vh; }
+    .carrusel .banner-content .info {
+      width: 600px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      font-size: 16px; } }
+
+.hacemos {
+  grid-area: "hacemos";
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  background-color: #ffd700; }
+  .hacemos .why {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%; }
+    .hacemos .why .why-2 {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background-color: #ffd700;
+      border-radius: 15px;
+      height: 400px;
+      width: 400px;
+      text-align: center;
+      color: #1928c4;
+      box-shadow: 5px 5px 15px 0px black; }
+      .hacemos .why .why-2 h5 {
+        font-weight: 800;
+        font-size: 30px; }
+      .hacemos .why .why-2 p {
+        font-weight: 400;
+        font-size: 18px;
+        font-weight: 500; }
+    .hacemos .why .video {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .hacemos .why .video #vid {
+        width: 560px;
+        height: 315px; }
+
+@media (orientation: portrait) {
+  .hacemos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center; }
+    .hacemos .why .video {
+      width: 100px; } }
+
 .vendedores {
   grid-area: "vendedores";
   background-color: #19284C;
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center; }
-  .vendedores h5 {
+  width: 100%; }
+  .vendedores h4 {
     color: #ffd700;
-    font-size: 50px;
+    font-size: 26px;
     text-align: center; }
   .vendedores .swiper {
     max-width: 1000px;
     min-height: 500px; }
-    .vendedores .swiper .swiper-wrapper .swiper-slide {
+    .vendedores .swiper .swiper-wrapper {
+      margin-left: auto;
+      margin-right: auto; }
+      .vendedores .swiper .swiper-wrapper .swiper-slide {
+        background-color: red;
+        display: flex;
+        justify-content: center;
+        align-items: end;
+        margin-top: 3rem; }
+        .vendedores .swiper .swiper-wrapper .swiper-slide .card {
+          position: relative;
+          min-width: 300px;
+          height: 376px;
+          background-color: #cecece;
+          border-radius: 10px;
+          overflow: hidden;
+          margin-left: 70px;
+          margin-right: 70px; }
+          .vendedores .swiper .swiper-wrapper .swiper-slide .card .head {
+            height: 100px;
+            width: 100%;
+            position: relative; }
+            .vendedores .swiper .swiper-wrapper .swiper-slide .card .head .circle {
+              position: absolute;
+              width: 300px;
+              height: 300px;
+              border-radius: 50%;
+              background-color: #ffd700;
+              bottom: 0; }
+            .vendedores .swiper .swiper-wrapper .swiper-slide .card .head .perfil {
+              width: 150px;
+              height: 150px;
+              position: absolute;
+              background-color: #fff;
+              padding: 5px;
+              border-radius: 50%;
+              bottom: -50%;
+              left: 50%;
+              transform: translate(-50%); }
+              .vendedores .swiper .swiper-wrapper .swiper-slide .card .head .perfil img {
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                object-fit: cover; }
+          .vendedores .swiper .swiper-wrapper .swiper-slide .card .description {
+            height: 200px;
+            padding-top: 3.5rem;
+            border-bottom: solid 5px #19284C;
+            text-align: center; }
+            .vendedores .swiper .swiper-wrapper .swiper-slide .card .description h3 {
+              color: #000000; }
+            .vendedores .swiper .swiper-wrapper .swiper-slide .card .description .title-vendedor {
+              color: #19284C;
+              font-size: 20px; }
+            .vendedores .swiper .swiper-wrapper .swiper-slide .card .description p span {
+              color: black;
+              font-size: 15px;
+              font-weight: bold; }
+          .vendedores .swiper .swiper-wrapper .swiper-slide .card .contact {
+            width: 100%;
+            height: 75px;
+            display: flex;
+            align-items: center;
+            justify-content: center; }
+            .vendedores .swiper .swiper-wrapper .swiper-slide .card .contact a {
+              text-decoration: none;
+              color: #19284C;
+              background-color: #ffd700;
+              padding: 5px 20px;
+              border-radius: 5px;
+              transition: .3s; }
+              .vendedores .swiper .swiper-wrapper .swiper-slide .card .contact a:hover {
+                background-color: #ffff60; }
+          .vendedores .swiper .swiper-wrapper .swiper-slide .card:hover {
+            box-shadow: 0 5px 15px #ffff60;
+            transform: translateY(-5px); }
+
+.ubicacion {
+  grid-area: "ubicacion";
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100vh; }
+  .ubicacion h3 {
+    color: #ffd700;
+    font-size: 50px; }
+  .ubicacion .cont-ubi {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap; }
+    .ubicacion .cont-ubi .ubi iframe {
+      width: 600px;
+      height: 400px; }
+    .ubicacion .cont-ubi .date {
+      color: #ffd700;
+      font-size: 25px; }
+
+@media (orientation: portrait) {
+  .ubicacion {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    .ubicacion h3 {
+      text-align: center; }
+    .ubicacion .cont-ubi {
       display: flex;
       justify-content: center;
       align-items: center;
-      margin-top: 3rem; }
-      .vendedores .swiper .swiper-wrapper .swiper-slide .card {
-        position: relative;
-        max-width: 300px;
-        height: 400px;
-        background-color: #cecece;
-        border-radius: 10px;
-        overflow: hidden; }
-        .vendedores .swiper .swiper-wrapper .swiper-slide .card .head {
-          height: 100px;
-          width: 100%;
-          position: relative; }
-          .vendedores .swiper .swiper-wrapper .swiper-slide .card .head .circle {
-            position: absolute;
-            width: 300px;
-            height: 300px;
-            border-radius: 50%;
-            background-color: #ffd700;
-            bottom: 0; }
-          .vendedores .swiper .swiper-wrapper .swiper-slide .card .head .perfil {
-            width: 150px;
-            height: 150px;
-            position: absolute;
-            background-color: #fff;
-            padding: 5px;
-            border-radius: 50%;
-            bottom: -50%;
-            left: 50%;
-            transform: translate(-50%); }
-            .vendedores .swiper .swiper-wrapper .swiper-slide .card .head .perfil img {
-              width: 100%;
-              height: 100%;
-              border-radius: 50%;
-              object-fit: cover; }
-        .vendedores .swiper .swiper-wrapper .swiper-slide .card .description {
-          height: 200px;
-          margin-top: 1.6rem;
-          border-bottom: solid 5px #19284C;
-          text-align: center; }
-          .vendedores .swiper .swiper-wrapper .swiper-slide .card .description h3 {
-            color: #000000; }
-          .vendedores .swiper .swiper-wrapper .swiper-slide .card .description h4 {
-            color: #19284C; }
-          .vendedores .swiper .swiper-wrapper .swiper-slide .card .description p span {
-            color: black;
-            font-size: 15px;
-            font-weight: bold; }
-        .vendedores .swiper .swiper-wrapper .swiper-slide .card .contact {
-          width: 100%;
-          height: 75px;
-          display: flex;
-          align-items: center;
-          justify-content: center; }
-          .vendedores .swiper .swiper-wrapper .swiper-slide .card .contact a {
-            text-decoration: none;
-            color: #19284C;
-            background-color: #ffd700;
-            padding: 5px 20px;
-            border-radius: 5px;
-            transition: .3s; }
-            .vendedores .swiper .swiper-wrapper .swiper-slide .card .contact a:hover {
-              background-color: #ffff60; }
-        .vendedores .swiper .swiper-wrapper .swiper-slide .card:hover {
-          box-shadow: 0 5px 15px #ffff60;
-          transform: translateY(-5px); }
+      flex-direction: column; }
+      .ubicacion .cont-ubi .ubi {
+        width: 100%;
+        height: 50vh;
+        display: flex;
+        justify-content: center; }
+        .ubicacion .cont-ubi .ubi iframe {
+          width: 90%;
+          height: 200; } }
+
+.servicios {
+  grid-area: "servicios";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: #fff;
+  width: 100%;
+  height: 80vh; }
+  .servicios h3 {
+    color: #19284C;
+    font-size: 60px; }
+  .servicios .cards-contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; }
+    .servicios .cards-contenedor .card {
+      display: flex;
+      background-color: #ffd700;
+      margin: 20px;
+      width: 480px; }
+      .servicios .cards-contenedor .card .img {
+        display: flex;
+        align-items: center; }
+      .servicios .cards-contenedor .card .card-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; }
+
+@media (orientation: portrait) {
+  .servicios {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .servicios .h3 {
+      text-align: center; }
+    .servicios .cards-contenedor {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%; }
+      .servicios .cards-contenedor .card {
+        width: 100%; } }
+
+.presupuesto {
+  grid-area: "presupuesto";
+  display: flex;
+  height: 100vh;
+  background-color: #ffd700;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0 10px 5px 0 black; }
+  .presupuesto .info {
+    color: #19284C;
+    width: 40%;
+    text-align: start; }
+    .presupuesto .info h3 {
+      font-size: 50px;
+      color: #19284C;
+      font-weight: 800; }
+    .presupuesto .info p {
+      font-size: 25px; }
+  .presupuesto form {
+    display: grid;
+    grid-template-areas: "conteiner3 conteiner4" "mensaje mensaje" "buttom buttom"; }
+    .presupuesto form .conteiner3 {
+      grid-area: conteiner3;
+      margin-right: 10px; }
+      .presupuesto form .conteiner3 .formulario {
+        display: flex;
+        flex-direction: column; }
+        .presupuesto form .conteiner3 .formulario input {
+          border-radius: 8px;
+          background-color: #ffff60;
+          height: 33px; }
+    .presupuesto form .conteiner4 {
+      grid-area: conteiner4; }
+      .presupuesto form .conteiner4 .formulario {
+        display: flex;
+        flex-direction: column; }
+      .presupuesto form .conteiner4 input {
+        border-radius: 8px;
+        background-color: #ffff60;
+        height: 33px; }
+      .presupuesto form .conteiner4 select {
+        background-color: #ffff60;
+        height: 33px;
+        border-radius: 8px;
+        border: solid 2px; }
+    .presupuesto form .mensaje {
+      grid-area: mensaje; }
+      .presupuesto form .mensaje .formulario {
+        display: flex;
+        flex-direction: column; }
+        .presupuesto form .mensaje .formulario textarea {
+          background-color: #ffff60;
+          border-radius: 8px;
+          border: solid 2px; }
+    .presupuesto form .buttom {
+      grid-area: buttom; }
+      .presupuesto form .buttom input {
+        background-color: #19284C;
+        color: white;
+        padding: 5px;
+        border-radius: 5px;
+        margin: 10px; }
+        .presupuesto form .buttom input:hover {
+          box-shadow: 0 5px 15px black;
+          transform: translateY(-3px); }
+
+@media (orientation: portrait) {
+  .presupuesto {
+    display: flex;
+    flex-direction: column; }
+    .presupuesto .info {
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      width: 100%; }
+      .presupuesto .info .prep {
+        margin-bottom: 40px; } }
 
 .cuerpo {
   display: grid;
   background-color: #19284C;
   font-family: "Roboto Slab", serif;
   min-height: 100vh;
-  grid: "carrusel" 1fr  "vendedores"  1fr   /     100%; }
-  .cuerpo .vendedores {
-    grid-area: "vendedores";
-    background-color: #19284C;
-    width: 100%;
-    height: 80vh;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap; }
-    .cuerpo .vendedores h5 {
-      color: #ffd700;
-      font-size: 50px;
-      text-align: center; }
-    .cuerpo .vendedores .card {
-      position: relative;
-      max-width: 300px;
-      height: 430px;
-      background-color: #cecece;
-      border-radius: 10px;
-      overflow: hidden; }
-      .cuerpo .vendedores .card .head {
-        height: 125px;
-        width: 100%;
-        position: relative; }
-        .cuerpo .vendedores .card .head .circle {
-          position: absolute;
-          width: 300px;
-          height: 300px;
-          border-radius: 50%;
-          background-color: #ffd700;
-          bottom: 0; }
-        .cuerpo .vendedores .card .head .perfil {
-          width: 150px;
-          height: 150px;
-          position: absolute;
-          background-color: #fff;
-          padding: 5px;
-          border-radius: 50%;
-          bottom: -50%;
-          left: 50%;
-          transform: translate(-50%); }
-          .cuerpo .vendedores .card .head .perfil img {
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            object-fit: cover; }
-      .cuerpo .vendedores .card .description {
-        height: 300px;
-        padding: 40px 20px 20px 20px;
-        border-bottom: solid 5px #19284C;
-        text-align: center; }
-        .cuerpo .vendedores .card .description h3 {
-          color: #000000; }
-        .cuerpo .vendedores .card .description h4 {
-          color: #19284C; }
-        .cuerpo .vendedores .card .description p {
-          color: black;
-          font-size: 15px; }
-      .cuerpo .vendedores .card .contact {
-        width: 100%;
-        height: 75px;
-        display: flex;
-        align-items: center;
-        justify-content: center; }
-        .cuerpo .vendedores .card .contact a {
-          text-decoration: none;
-          color: #19284C;
-          background-color: #ffd700;
-          padding: 5px 20px;
-          border-radius: 5px;
-          transition: .3s; }
-          .cuerpo .vendedores .card .contact a:hover {
-            background-color: #ffff60; }
-      .cuerpo .vendedores .card:hover {
-        box-shadow: 0 5px 15px black;
-        transform: translateY(-15px); }
+  grid: "carrusel" 1fr  "vendedores"  1fr    "hacemos" "servicios" "ubicacion" "presupuesto"  /     100%; }
 
 @keyframes banner {
   0% {
@@ -354,6 +512,8 @@ header {
       margin: 20px; }
       #pie ul li a {
         text-decoration: none;
+        display: flex;
+        align-items: center;
         font-family: "Roboto Slab", serif;
         color: #19284C; }
         #pie ul li a img {
