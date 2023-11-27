@@ -226,7 +226,6 @@ header {
       margin-left: auto;
       margin-right: auto; }
       .vendedores .swiper .swiper-wrapper .swiper-slide {
-        background-color: red;
         display: flex;
         justify-content: center;
         align-items: end;
