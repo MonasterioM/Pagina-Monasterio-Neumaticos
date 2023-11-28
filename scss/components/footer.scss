@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&family=Roboto+Slab:wght@500&display=swap');
-@import "../base/variables";
+@import "../base/variables.scss";
 #pie{
     display: flex;
     flex-direction: column;
@@ -18,10 +18,13 @@
         display: flex;
         text-align: center;
         li{
+            
             display: inline-block;
             margin: 20px;
             a{
                 text-decoration: none;
+                display: flex;
+                align-items: center;
                 font-family: $font;
                 color: $color-primary;
                 img{

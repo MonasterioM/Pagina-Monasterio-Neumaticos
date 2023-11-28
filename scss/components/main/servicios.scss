@@ -1,0 +1,57 @@
+.servicios{
+    grid-area: "servicios";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #fff;
+    width: 100%;
+    height: 80vh;
+    h3{
+        color: $color-primary;
+        font-size: 60px;
+    }
+    .cards-contenedor{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        .card{
+            display: flex;
+            background-color: $color-secundario;
+            margin: 20px;
+            width: 480px;
+                .img{
+                    display: flex;
+                    align-items: center;
+                }
+                .card-info{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                }
+        }
+    }
+}
+
+@media (orientation: portrait){
+
+    .servicios{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .h3{
+            text-align: center;
+        }
+        .cards-contenedor{
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            .card{
+                width: 100%;
+            }
+        }
+    }
+
+}
