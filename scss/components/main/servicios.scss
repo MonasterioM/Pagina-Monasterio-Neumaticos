@@ -30,6 +30,9 @@
                     flex-direction: column;
                     justify-content: center;
                     align-items: center;
+                    p{
+                        // text-align: justify;
+                    }
                 }
         }
     }
@@ -41,7 +44,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        .h3{
+        h3{
             text-align: center;
         }
         .cards-contenedor{
@@ -50,6 +53,7 @@
             width: 100%;
             .card{
                 width: 100%;
+                border-radius: 10px;
             }
         }
     }
