@@ -10,41 +10,21 @@
     display: grid;
     background-color: $color-primary;
     font-family: $font;
+    width: 100%;
     min-height: 100vh;
-        grid: 
-         "carrusel" 1fr 
-         "vendedores"  1fr   
-         "hacemos"  1fr
-         "servicios"    1fr
-         "ubicacion"    1fr
-         "presupuesto" 1fr  /    
-            100%
-        ;
+        // grid: 
+        //  "carrusel" 1fr 
+        //  "vendedores"  1fr   
+        //  "hacemos"  1fr
+        //  "servicios"    1fr
+        //  "ubicacion"    1fr
+        //  "presupuesto" 1fr  /    
+        //     100%
+        // ;
+
+         grid: 
+         "carrusel" 1fr /
+           100%
+
 }
 
-@keyframes banner {
-    0%{
-        background-image: url(../img/carrusel1.jpg);
-    }
-    25%{
-        background-image: url(../img/carrusel1.jpg);
-    }
-    26%{
-        background-image: url(../img/carrusel2.jpg);
-    }
-    50%{
-        background-image: url(../img/carrusel2.jpg);
-    }
-    51%{
-        background-image: url(../img/carrusel3.jpg);
-    }
-    75%{
-        background-image: url(../img/carrusel3.jpg);
-    }
-    76%{
-        background-image: url(../img/WhatsApp_);
-    }
-    100%{
-        background-image: url(../img/WhatsApp_);
-    }
-}
