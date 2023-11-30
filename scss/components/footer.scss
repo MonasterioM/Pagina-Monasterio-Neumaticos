@@ -6,7 +6,7 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 150px;
+    height: 25vh;
     background-color: $color-secundario;
     padding: 1em 0;
     div{
@@ -17,10 +17,8 @@
     ul{
         display: flex;
         text-align: center;
-        li{
-            
+        li{            
             display: inline-block;
-            margin: 20px;
             a{
                 text-decoration: none;
                 display: flex;
@@ -28,14 +26,23 @@
                 font-family: $font;
                 color: $color-primary;
                 img{
-                    width: 40px;
-                    height: 40px;
+                    width: 100px;
+                    height: 100px;
                 }
             }
         }
     }
 }
 
-  
+@media (orientation:portrait){
+
+    #pie{
+        ul{
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+}
   
   

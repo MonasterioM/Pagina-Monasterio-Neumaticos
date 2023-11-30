@@ -1,14 +1,14 @@
 .presupuesto{
     grid-area: "presupuesto";
     display: flex;
-    height: 100vh;
+    height: 90vh;
     background-color: $color-secundario;
     justify-content: space-around;
     align-items: center;
     .info{
         color: $color-primary;
-        width: 40%;
         text-align: start;
+        width: 45%;
         h3{
             font-size: 50px;
             color: $color-primary;
@@ -82,7 +82,7 @@
             }
         }
     }
-    box-shadow: 0 10px 5px 0 black;
+    border-bottom: solid 1px black;
 }
 
 @media (orientation: portrait){
