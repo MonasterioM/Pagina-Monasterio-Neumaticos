@@ -342,52 +342,55 @@
               Estamos ansiosos por escucharte y ayudarte
               con tus necesidades.</p>
           </div>
-          <form action="">
+          <form action="https://formsubmit.co/neumaticosmonasterio@gmail.com" method="POST">
             <div class="conteiner3">
               <div class="formulario">
                 <label for="FirstName">Nombre</label>
-                <input type="text" placeholder="Nombres" aria-label="First name">
+                <input type="text" name="Nombre" placeholder="Nombres" aria-label="First name">
               </div>
               <div class="formulario">
                 <label for="LastName">Apellido</label>
-                <input type="text" placeholder="Apellido" aria-label="Last name">
+                <input type="text" name="Apellido" placeholder="Apellido" aria-label="Last name">
               </div>
               <div class="formulario">
                 <label for="formGroupExampleInput">Correo</label>
-                <input type="email" placeholder="Correo electronico">
+                <input type="email" name="correo" placeholder="Correo electronico">
               </div>
             </div>
             <div class="conteiner4">
               <div class="formulario">
                 <label for="exampleFormControlInput1">Celular</label>
-                <input type="tel" placeholder="Numero de celular">
+                <input type="tel" name="Celular" placeholder="Numero de celular">
               </div>
               <div class="formulario">
                 <label for="NickName">Medida de cubiertas</label>
-                <input type="text" placeholder="Medida de tus cubiertas">
+                <input type="text" name="Medida de cubierta" placeholder="Medida de tus cubiertas">
               </div>
               <div class="formulario">
                 <label for="NickName">Servicios</label>
-                <select class="form-select" aria-label="Default select example">
+                <select class="form-select" name="value" aria-label="Default select example">
                   <option selected>Seleccione el servicio</option>
-                  <option value="1">Vulcanizado</option>
-                  <option value="2">Recauchutaje</option>
-                  <option value="3">Precurado</option>
-                  <option value="3">Retacado</option>
-                  <option value="3">Relleno [interio/exterior con tela]</option>
+                  <option value="Vulcanizado">Vulcanizado</option>
+                  <option value="Recauchutaje">Recauchutaje</option>
+                  <option value="Precurado">Precurado</option>
+                  <option value="Retacado">Retacado</option>
+                  <option value="Relleno [interio/exterior con tela]">Relleno [interio/exterior con tela]</option>
                 </select>
               </div>
             </div>
             <div class="mensaje">
               <div class="formulario">
                 <label for="exampleFormControlTextarea1">Mensaje</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Escriba su consulta"></textarea>
+                <textarea class="form-control" id="exampleFormControlTextarea1" name="mensaje" placeholder="Escriba su consulta"></textarea>
               </div>
             </div>
             <div class="buttom">
               <input type="submit">
-              <input type="reset">
+              <!-- <input type="reset"> -->
             </div>
+
+            <input type="hidden" name="_next" value="http://127.0.0.1:5500/index.html">
+            <input type="hidden" name="_captcha" value="false">
           </form>
         </section> 
       </section>
