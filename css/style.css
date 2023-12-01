@@ -17,7 +17,8 @@ header {
   height: 5rem;
   padding-left: 2rem;
   padding-right: 2rem;
-  z-index: 2; }
+  z-index: 2;
+  border-bottom: solid 0.3px #04045c; }
   header .logo a img {
     width: 200px;
     height: 57.14px; }
@@ -71,15 +72,17 @@ header {
       bottom: 0px;
       width: 250px;
       height: 100%;
-      z-index: 1; }
+      z-index: 1;
+      display: flex;
+      flex-direction: column; }
       header nav .nav-1 {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin-bottom: 320px; }
+        margin-top: 40px; }
         header nav .nav-1 li {
-          margin-top: 10px; }
+          margin-top: 20px; }
       header nav .btn-menu-close {
         display: block;
         background-color: yellow;
@@ -410,32 +413,34 @@ header {
   flex-wrap: wrap;
   background-color: #fff;
   width: 100%;
-  height: auto; }
+  height: 400px; }
   .servicios h3 {
     color: #19284C;
-    font-size: 45px;
+    font-size: 34px;
     font-weight: 800; }
-  .servicios .cards-contenedor {
+  .servicios .swiper .swiper-wrapper .swiper-slide {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    flex-wrap: wrap; }
-    .servicios .cards-contenedor .card {
+    margin-right: 100px;
+    padding-bottom: 1.5rem;
+    padding-top: 2rem; }
+    .servicios .swiper .swiper-wrapper .swiper-slide .card {
       display: flex;
       background-color: #ffd700;
-      margin: 20px;
+      margin: 10px;
       width: 480px;
       border-radius: 15px; }
-      .servicios .cards-contenedor .card .img {
+      .servicios .swiper .swiper-wrapper .swiper-slide .card .img {
         display: flex;
         align-items: center;
         justify-content: center;
         margin-right: 15px;
         height: 200px; }
-        .servicios .cards-contenedor .card .img img {
+        .servicios .swiper .swiper-wrapper .swiper-slide .card .img img {
           width: 150px;
           height: auto; }
-      .servicios .cards-contenedor .card .card-info {
+      .servicios .swiper .swiper-wrapper .swiper-slide .card .card-info {
         display: flex;
         flex-direction: column;
         justify-content: center;

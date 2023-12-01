@@ -1,4 +1,4 @@
-.servicios{
+.servicios {
     grid-area: "servicios";
     display: flex;
     justify-content: center;
@@ -6,59 +6,86 @@
     flex-wrap: wrap;
     background-color: #fff;
     width: 100%;
-    height: auto;
-    h3{
+    height: 400px;
+
+    h3 {
         color: $color-primary;
-        font-size: 45px;
+        font-size: 34px;
         font-weight: 800;
     }
-    .cards-contenedor{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-        .card{
-            display: flex;
-            background-color: $color-secundario;
-            margin: 20px;
-            width: 480px;
-            border-radius: 15px;
-                .img{
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    margin-right: 15px;
-                    height: 200px;
-                    img{
-                        width: 150px;
-                        height: auto;
 
+    .swiper {
+            // width: 90%;
+        .swiper-wrapper {
+                
+            .swiper-slide {
+                // background-color: red;
+                
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                margin-right: 100px;
+                padding-bottom: 1.5rem;
+                padding-top: 2rem;
+
+
+                .card {
+                    display: flex;
+                    background-color: $color-secundario;
+                    margin: 10px;
+                    width: 480px;
+                    border-radius: 15px;
+
+                    .img {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin-right: 15px;
+                        height: 200px;
+
+                        img {
+                            width: 150px;
+                            height: auto;
+
+                        }
+                    }
+
+                    .card-info {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
                     }
                 }
-                .card-info{
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
-                }
+            }
+
+
+
         }
+
+
     }
+
+
 }
 
-@media (orientation: portrait){
+@media (orientation: portrait) {
 
-    .servicios{
+    .servicios {
         display: flex;
         justify-content: center;
         align-items: center;
-        h3{
+
+        h3 {
             text-align: center;
         }
-        .cards-contenedor{
+
+        .cards-contenedor {
             display: flex;
             flex-wrap: wrap;
             width: 100%;
-            .card{
+
+            .card {
                 width: 100%;
                 border-radius: 10px;
             }
