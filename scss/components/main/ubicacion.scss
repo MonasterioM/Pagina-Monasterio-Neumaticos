@@ -9,7 +9,7 @@
     height: 100vh;
     h3{
         color: $color-secundario;
-        font-size: 50px;
+        font-size: 40px;
         width: 100%;
         text-align: center;
         margin-bottom: 40px;
@@ -64,8 +64,15 @@
                 display: flex;
                 justify-content: center;
                 iframe{
-                    width: 70%;
+                    width: 85%;
                     height: 400px;
+                }
+            }
+            .date{
+                .date2{
+                    p{
+                        font-size: 20px;                        
+                    }
                 }
             }
         }

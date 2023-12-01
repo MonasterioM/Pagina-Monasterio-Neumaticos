@@ -17,7 +17,8 @@ header {
   height: 5rem;
   padding-left: 2rem;
   padding-right: 2rem;
-  z-index: 2; }
+  z-index: 2;
+  border-bottom: solid 0.3px #04045c; }
   header .logo a img {
     width: 200px;
     height: 57.14px; }
@@ -71,15 +72,17 @@ header {
       bottom: 0px;
       width: 250px;
       height: 100%;
-      z-index: 1; }
+      z-index: 1;
+      display: flex;
+      flex-direction: column; }
       header nav .nav-1 {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin-bottom: 320px; }
+        margin-top: 40px; }
         header nav .nav-1 li {
-          margin-top: 10px; }
+          margin-top: 20px; }
       header nav .btn-menu-close {
         display: block;
         background-color: yellow;
@@ -115,22 +118,25 @@ header {
 
 .carrusel {
   grid-area: carrusel;
+  position: relative;
   width: 100%;
   height: 80vh;
+  background-image: url(../img/carrusel1.jpg);
   background-position: center;
   background-size: cover;
-  transition: all .1s ease-in-out; }
+  transition: all .1s ease-in-out;
+  animation: banner 28s infinite linear; }
   .carrusel .banner-content {
     width: 100%;
     height: 100%;
     color: #fff;
-    background: linear-gradient(90deg, black 0%, rgba(0, 0, 0, 0.902398) 3%, rgba(0, 0, 0, 0) 100%);
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.89) 0%, rgba(0, 0, 0, 0.902398) 40%, rgba(0, 0, 0, 0) 100%);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center; }
-    .carrusel .banner-content .info h1 {
+    .carrusel .banner-content .info h2 {
       font-family: "Roboto Slab", serif;
       font-weight: 800;
       font-size: 35px;
@@ -141,7 +147,7 @@ header {
       color: #ffd700; }
     .carrusel .banner-content .info p {
       font-family: "Roboto Slab", serif;
-      width: 100%;
+      width: 50%;
       font-weight: 400;
       text-align: center;
       font-size: 16px;
@@ -153,10 +159,19 @@ header {
     .carrusel .banner-content {
       width: 100%; }
       .carrusel .banner-content .info {
-        padding-left: 20px;
-        padding-right: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
         width: 100%;
-        text-align: center; } }
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        font-size: 16px; }
+        .carrusel .banner-content .info h2 {
+          width: 100%; }
+        .carrusel .banner-content .info p {
+          width: 90%; } }
 
 @keyframes banner {
   0% {
@@ -172,23 +187,23 @@ header {
   75% {
     background-image: url(../img/carrusel3.jpg); }
   76% {
-    background-image: url(../img/WhatsApp_); }
+    background-image: url(../img/carrusel4.jpg); }
   100% {
-    background-image: url(../img/WhatsApp_); } }
+    background-image: url(../img/carrusel4.jpg); } }
 
 .hacemos {
   grid-area: "hacemos";
-  display: flex;
-  align-items: center;
   height: 100vh;
   background-color: #ffd700;
-  width: 100%; }
+  width: 100%;
+  display: flex;
+  justify-content: center; }
   .hacemos .why {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 50%; }
+    width: 100%; }
     .hacemos .why .why-2 {
       display: flex;
       flex-direction: column;
@@ -202,7 +217,7 @@ header {
       box-shadow: 5px 5px 10px 0px black; }
       .hacemos .why .why-2 h5 {
         font-weight: 800;
-        font-size: 30px;
+        font-size: 35px;
         margin-bottom: 20px; }
       .hacemos .why .why-2 p {
         font-weight: 400;
@@ -211,38 +226,42 @@ header {
         text-align: justify;
         padding-left: 10px;
         padding-right: 10px; }
-    .hacemos .why .video {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center; }
-      .hacemos .why .video #vid {
-        width: 560px;
-        height: 315px; }
+  .hacemos .video {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .hacemos .video iframe {
+      width: 560px;
+      height: 315px; }
 
 @media (orientation: portrait) {
   .hacemos {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%; }
+    height: 100vh; }
     .hacemos .why {
-      width: 100%; }
+      width: 100%;
+      height: 100%; }
       .hacemos .why .why-2 {
         width: 90%; }
-      .hacemos .why .video {
-        width: 100px; } }
+    .hacemos .video {
+      width: 100%; }
+      .hacemos .video iframe {
+        width: 95%;
+        height: 30vh; } }
 
 .vendedores {
   grid-area: "vendedores";
   background-color: #19284C;
-  width: 100%; }
+  width: 100%;
+  padding-top: 50px; }
   .vendedores h4 {
     color: #ffd700;
-    font-size: 26px;
+    font-size: 35px;
     text-align: center; }
   .vendedores .swiper {
     max-width: 1000px;
@@ -259,7 +278,7 @@ header {
           position: relative;
           min-width: 300px;
           height: 376px;
-          background-color: #cecece;
+          background-color: #c7c7c7;
           border-radius: 10px;
           overflow: hidden;
           margin-left: 70px;
@@ -317,10 +336,13 @@ header {
               padding: 5px 20px;
               border-radius: 5px;
               transition: .3s; }
+              .vendedores .swiper .swiper-wrapper .swiper-slide .card .contact a img {
+                width: 20px;
+                height: 20px; }
               .vendedores .swiper .swiper-wrapper .swiper-slide .card .contact a:hover {
                 background-color: #ffff60; }
           .vendedores .swiper .swiper-wrapper .swiper-slide .card:hover {
-            box-shadow: 0 5px 15px #ffff60;
+            box-shadow: 0 5px 15px #000000;
             transform: translateY(-5px); }
 
 .ubicacion {
@@ -334,7 +356,7 @@ header {
   height: 100vh; }
   .ubicacion h3 {
     color: #ffd700;
-    font-size: 50px;
+    font-size: 40px;
     width: 100%;
     text-align: center;
     margin-bottom: 40px; }
@@ -378,8 +400,10 @@ header {
         display: flex;
         justify-content: center; }
         .ubicacion .cont-ubi .ubi iframe {
-          width: 70%;
-          height: 400px; } }
+          width: 85%;
+          height: 400px; }
+      .ubicacion .cont-ubi .date .date2 p {
+        font-size: 20px; } }
 
 .servicios {
   grid-area: "servicios";
@@ -389,24 +413,34 @@ header {
   flex-wrap: wrap;
   background-color: #fff;
   width: 100%;
-  height: 80vh; }
+  height: 400px; }
   .servicios h3 {
     color: #19284C;
-    font-size: 60px; }
-  .servicios .cards-contenedor {
+    font-size: 34px;
+    font-weight: 800; }
+  .servicios .swiper .swiper-wrapper .swiper-slide {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    flex-wrap: wrap; }
-    .servicios .cards-contenedor .card {
+    margin-right: 100px;
+    padding-bottom: 1.5rem;
+    padding-top: 2rem; }
+    .servicios .swiper .swiper-wrapper .swiper-slide .card {
       display: flex;
       background-color: #ffd700;
-      margin: 20px;
-      width: 480px; }
-      .servicios .cards-contenedor .card .img {
+      margin: 10px;
+      width: 480px;
+      border-radius: 15px; }
+      .servicios .swiper .swiper-wrapper .swiper-slide .card .img {
         display: flex;
-        align-items: center; }
-      .servicios .cards-contenedor .card .card-info {
+        align-items: center;
+        justify-content: center;
+        margin-right: 15px;
+        height: 200px; }
+        .servicios .swiper .swiper-wrapper .swiper-slide .card .img img {
+          width: 150px;
+          height: auto; }
+      .servicios .swiper .swiper-wrapper .swiper-slide .card .card-info {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -430,7 +464,7 @@ header {
 .presupuesto {
   grid-area: "presupuesto";
   display: flex;
-  height: 100vh;
+  height: 90vh;
   background-color: #ffd700;
   justify-content: space-around;
   align-items: center;
@@ -521,7 +555,7 @@ header {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 150px;
+  height: 25vh;
   background-color: #ffd700;
   padding: 1em 0; }
   #pie div h4 {
@@ -530,8 +564,7 @@ header {
     display: flex;
     text-align: center; }
     #pie ul li {
-      display: inline-block;
-      margin: 20px; }
+      display: inline-block; }
       #pie ul li a {
         text-decoration: none;
         display: flex;
@@ -539,5 +572,10 @@ header {
         font-family: "Roboto Slab", serif;
         color: #19284C; }
         #pie ul li a img {
-          width: 40px;
-          height: 40px; }
+          width: 100px;
+          height: 100px; }
+
+@media (orientation: portrait) {
+  #pie ul {
+    display: flex;
+    flex-direction: column; } }

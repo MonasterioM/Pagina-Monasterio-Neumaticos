@@ -1,26 +1,27 @@
 @import "../base/variables.scss";
 .carrusel{
     grid-area: carrusel;
-    // position: relative;
+    position: relative;
     width: 100%;
     height: 80vh;
-    // background-image: url(../img/carrusel1.jpg);
+    background-image: url(../img/carrusel1.jpg);
     background-position: center;
     background-size: cover;
     transition: all .1s ease-in-out;
-    // animation: banner 28s infinite linear;
+    animation: banner 28s infinite linear;
     .banner-content{
         width: 100%;
         height: 100%;
         color: #fff;
-        background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.9023984593837535) 3%, rgba(0,0,0,0) 100%);
+        background: linear-gradient(90deg, rgba(0, 0, 0, 0.89) 0%, rgba(0,0,0,0.9023984593837535) 40%, rgba(0,0,0,0) 100%);
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         text-align: center;
         .info{
-            h1{
+            
+            h2{
                 font-family: $font;
                 font-weight: 800;
                 font-size: 35px;
@@ -32,9 +33,9 @@
             }
             p{
                 font-family: $font;
-                width: 100%;
+                width: 50%;
                 font-weight: 400;
-                text-align: center;
+                text-align:center;
                 font-size: 16px;
                 color: $color-secundario;
             }
@@ -46,20 +47,24 @@
 @media (orientation:portrait){
     .carrusel{
         height: 50vh;
-        // background-color: red;
         .banner-content{
-            // background-color: purple;
             width: 100%;
             .info{
-                padding-left: 20px;
-                padding-right: 20px;
+                padding-left: 10px;
+                padding-right: 10px;
                 width: 100%;
                 text-align: center;
-                // display: flex;
-                // justify-content: center;
-                // align-items: center;
-                // flex-direction: column;
-                // font-size: 16px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                font-size: 16px;
+                h2{
+                    width: 100%;
+                }
+                p{
+                    width: 90%;
+                }
             }
         }
     }
@@ -88,9 +93,9 @@
         background-image: url(../img/carrusel3.jpg);
     }
     76%{
-        background-image: url(../img/WhatsApp_);
+        background-image: url(../img/carrusel4.jpg);
     }
     100%{
-        background-image: url(../img/WhatsApp_);
+        background-image: url(../img/carrusel4.jpg);
     }
 }

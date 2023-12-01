@@ -2,27 +2,22 @@
     grid-area: "vendedores";
     background-color: $color-primary;
     width: 100%;
-
-
+    padding-top: 50px;
     h4 {
         color: $color-secundario;
-        font-size: 26px;
+        font-size: 35px;
         text-align: center;
     }
 
     .swiper {
         max-width: 1000px;
         min-height: 500px;
-        // background-color: red;
 
         .swiper-wrapper {
 
             margin-left: auto;
             margin-right: auto;
-
-            // background-color: purple;
             .swiper-slide {
-                //  margin: 0px;
                 display: flex;
                 justify-content: center;
                 align-items: end;
@@ -32,7 +27,7 @@
                     position: relative;
                     min-width: 300px;
                     height: 376px;
-                    background-color: #cecece;
+                    background-color: #c7c7c7;
                     border-radius: 10px;
                     overflow: hidden;
                     margin-left: 70px;
@@ -113,7 +108,10 @@
                             padding: 5px 20px;
                             border-radius: 5px;
                             transition: .3s;
-
+                            img{
+                                width: 20px;
+                                height: 20px;
+                            }
                             &:hover {
                                 background-color: #ffff60;
                             }
@@ -121,7 +119,7 @@
                     }
 
                     &:hover {
-                        box-shadow: 0 5px 15px #ffff60;
+                        box-shadow: 0 5px 15px #000000;
                         transform: translateY(-5px);
                     }
                 }
