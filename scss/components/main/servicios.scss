@@ -10,12 +10,13 @@
 
     h3 {
         color: $color-primary;
-        font-size: 34px;
+        font-size: 32px;
         font-weight: 800;
+        margin-top: 1.5rem;
     }
 
     .swiper {
-            // width: 90%;
+            // background-color: red;
         .swiper-wrapper {
                 
             .swiper-slide {
@@ -26,7 +27,7 @@
                 align-items: center;
                 margin-right: 100px;
                 padding-bottom: 1.5rem;
-                padding-top: 2rem;
+                // padding-top: rem;
 
 
                 .card {
@@ -68,6 +69,29 @@
 
 
 }
+
+
+
+
+
+@media (max-width: 818px) {
+
+    .swiper{
+        .swiper-button-prev{
+            display: none;
+        }
+        .swiper-button-next{
+            display: none;
+        }
+    }
+
+
+    .card{
+        width: 400px !important;
+        // background-color: white !important ;
+    }
+}
+
 
 @media (orientation: portrait) {
 

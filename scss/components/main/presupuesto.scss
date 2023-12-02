@@ -1,103 +1,147 @@
-.presupuesto{
+.presupuesto {
     grid-area: "presupuesto";
     display: flex;
     height: 90vh;
     background-color: $color-secundario;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    .info{
+    gap: 50px;
+    .info {
         color: $color-primary;
         text-align: start;
         width: 45%;
-        h3{
-            font-size: 50px;
+
+        h3 {
+            font-size: 45px;
             color: $color-primary;
             font-weight: 800;
         }
-        p{
+
+        p {
             font-size: 25px;
         }
     }
-    form{
+
+    form {
         display: grid;
-        grid-template-areas: 
-        "conteiner3 conteiner4"
-        "mensaje mensaje"
-        "buttom buttom";
-        .conteiner3{
+        grid-template-areas:
+            "conteiner3 conteiner4"
+            "mensaje mensaje"
+            "buttom buttom";
+
+        .conteiner3 {
             grid-area: conteiner3;
             margin-right: 10px;
-            .formulario{
+            font-family: sans-serif;
+            font-weight: 700;
+
+            .formulario {
                 display: flex;
                 flex-direction: column;
-                input{
-                    border-radius: 8px;
+                margin: 5px 0px;
+
+                input {
+                    padding: 5px;
+                    border-radius: 5px;
                     background-color: #ffff60;
                     height: 33px;
                 }
-            }                
+            }
         }
-        .conteiner4{
+
+        .conteiner4 {
             grid-area: conteiner4;
-            .formulario{
+            font-family: sans-serif;
+            font-weight: 700;
+
+            .formulario {
                 display: flex;
                 flex-direction: column;
+                margin: 5px 0px;
             }
-            input{
-                border-radius: 8px;
+
+            input {
+                border-radius: 5px;
+                padding: 5px;
                 background-color: #ffff60;
                 height: 33px;
             }
-            select{
+
+            select {
                 background-color: #ffff60;
                 height: 33px;
-                border-radius: 8px;
+                border-radius: 5px;
                 border: solid 2px;
             }
         }
-        .mensaje{
+
+        .mensaje {
             grid-area: mensaje;
-            .formulario{
+
+            .formulario {
                 display: flex;
                 flex-direction: column;
-                textarea{
+                font-family: sans-serif;
+                font-weight: 700;
+                textarea {
                     background-color: #ffff60;
-                    border-radius: 8px;
+                    border-radius: 5px;
                     border: solid 2px;
+                    resize: none;
+                    padding: 5px;
+                    font-family: sans-serif;
                 }
-            }                
+            }
         }
-        .buttom{
+
+        .buttom {
             grid-area: buttom;
-            input{
+            button {
                 background-color: $color-primary;
                 color: white;
-                padding: 5px;
+                font-family: sans-serif;
+                font-weight: 700;
+                padding: 7px;
                 border-radius: 5px;
-                margin: 10px;
-                &:hover{
+                margin-top: 10px;
+
+                &:hover {
                     box-shadow: 0 5px 15px black;
                     transform: translateY(-3px);
                 }
             }
+            .mensaje-enviado{
+                background-color: rgba(17, 17, 211, 0.651);
+                color: white;
+                padding: 10px;
+                border-radius: 7px;
+                margin-top: 7px;
+                text-align: center;
+                color: #ffff60;
+                border: 3px solid $color-primary
+                
+             }
         }
     }
+
     border-bottom: solid 1px black;
 }
 
-@media (orientation: portrait){
+@media (orientation: portrait) {
 
-    .presupuesto{
+    .presupuesto {
         display: flex;
         flex-direction: column;
-        .info{
+        padding: 10px;    
+        .info {
             text-align: center;
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
             width: 100%;
-            .prep{
+
+            .prep {
                 margin-bottom: 40px;
             }
         }

@@ -187,78 +187,78 @@ header {
 
 }
 
-// @media (orientation: portrait) {
+@media (orientation: portrait) {
 
-//   header {
-//     padding-left: 1rem;
-//     padding-right: 1rem;
+  header {
+    padding-left: 1rem;
+    padding-right: 1rem;
 
-//     nav {
-//       background-color: #ffd900;
-//       position: fixed;
-//       right: 0px;
-//       bottom: 0px;
-//       width: 250px;
-//       height: 100%;
-//       z-index: 1;
+    nav {
+      background-color: #ffd900;
+      position: fixed;
+      right: 0px;
+      bottom: 0px;
+      width: 250px;
+      height: 100%;
+      z-index: 1;
 
 
-//       .nav-1 {
-//         display: flex;
-//         flex-direction: column;
-//         justify-content: center;
-//         align-items: center;
-//         margin-bottom: 320px;
+      .nav-1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 320px;
 
-//         li {
-//           margin-top: 10px;
-//         }
+        li {
+          margin-top: 10px;
+        }
 
-//       }
+      }
       
-//       .btn-menu-close {
-//         display: block;
-//         background-color: yellow;
-//         position: absolute;
-//         top: 7px;
-//         right: 7px;
-//         padding-left: 8px;
-//         padding-right: 8px;
-//         border: none;
-//         border-radius: 7px;
+      .btn-menu-close {
+        display: block;
+        background-color: yellow;
+        position: absolute;
+        top: 7px;
+        right: 7px;
+        padding-left: 8px;
+        padding-right: 8px;
+        border: none;
+        border-radius: 7px;
 
-//       }
+      }
 
-//       .menu-btn-close {
-//         display: block !important;
-//       }
-//     }
+      .menu-btn-close {
+        display: block !important;
+      }
+    }
 
-//     .active-div {
-//       display: block !important;
-//     }
+    .active-div {
+      display: block !important;
+    }
 
-//     .fondo-opaciti {
-//       display: none;
-//       position: fixed;
-//       top: 0;
-//       bottom: 0;
-//       right: 0;
-//       left: 0;
-//       background: rgba(0, 0, 0, 0.537);
+    .fondo-opaciti {
+      display: none;
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      background: rgba(0, 0, 0, 0.537);
 
-//     }
-
-
-//     .btn-menu-toggle {
-//       display: block !important;
-//       background-color: inherit;
-//       border: none;
-//       .icon path{
-//         color: $color-primary;
-//       }
-//     }
+    }
 
 
-//   }
-// }
+    .btn-menu-toggle {
+      display: block !important;
+      background-color: inherit;
+      border: none;
+      .icon path{
+        color: $color-primary;
+      }
+    }
+
+
+  }
+}

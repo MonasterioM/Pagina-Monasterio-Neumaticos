@@ -82,7 +82,7 @@
         <!------------------------------ VENDEDORES --------------------------------------->
 
         <section class="vendedores" id="vendedores">
-          <h4>Nuestros Vendedores</h4>
+          <h4>NUESTROS VENDEDORES</h4>
           <div class="swiper">
             <div class="swiper-wrapper">
 
@@ -253,7 +253,7 @@
         <!--------------------------------------NUESTROS SERVICIOS -------------------------------------->
 
         <section class="servicios" id="servicios">
-          <h3>Nuestros Servicios</h3>
+          <h3>NUESTROS SERVICIOS</h3>
           <div class="swiper">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
@@ -328,8 +328,8 @@
               </div>
               
             </div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
+            <!-- <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div> -->
             <div class="swiper-pagination"></div>
 
             <div class="swiper-scrollbar"></div>
@@ -339,7 +339,7 @@
         <!-------------------------------------- NUESTRA UBICACION --------------------------------------->
 
         <section class="ubicacion" id="ubicacion">
-          <h3>Encontranos</h3>
+          <h3>ENCONTRANOS</h3>
           <div class="cont-ubi">
             <div class="ubi">
               <iframe
@@ -378,16 +378,19 @@
 
         <section class="presupuesto" id="presupuesto">
           <div class="info">
-            <h3>Pedí tu</h3>
-            <h3 class="prep">presupuesto</h3>
+            <h3>PEDI TU</h3>
+            <h3 class="prep">PRESUPUESTO</h3>
             <p>Ponte en contacto con nosotros ultilizando el formulario de contacto.
               Estamos ansiosos por escucharte y ayudarte
               con tus necesidades.</p>
           </div>
-          <form action="https://formsubmit.co/neumaticosmonasterio@gmail.com" method="POST">
+
+          <!--  -->
+          <!-- action="https://formsubmit.co/neumaticosmonasterio@gmail.com" method="POST" -->
+          <form id="form-presuesto"  >
             <div class="conteiner3">
               <div class="formulario">
-                <label for="FirstName">Nombre</label>
+                <label for="FirstName" >Nombre</label>
                 <input type="text" name="Nombre" placeholder="Nombres" aria-label="First name">
               </div>
               <div class="formulario">
@@ -427,13 +430,16 @@
               </div>
             </div>
             <div class="buttom">
-              <input type="submit">
-              <!-- <input type="reset"> -->
+              <button id="enviar">Enviar</button>
+              <div id="envio-message" class="mensaje-enviado">
+                <p>El correo se envio correctamente.</p>
+              </div>
             </div>
 
             <input type="hidden" name="_next" value="http://127.0.0.1:5500/index.html">
             <input type="hidden" name="_captcha" value="false">
           </form>
+          
         </section>
       </section>
     </main>
@@ -475,46 +481,7 @@
       scrollbar: {
         el: '.swiper-scrollbar',
       },
-      breakpoints: {
-        640: {
-          slidesPerView: 1,
-          spaceBetween: 20,
-        },
-        768: {
-          slidesPerView: 2,
-          spaceBetween: 40,
-        },
-        1024: {
-          slidesPerView: 2,
-          spaceBetween: 50,
-        },
-      },
-    });
-  </script>
-  <script>
-    const swiperTwo = new Swiper('.swiper', {
-      // Optional parameters
-      direction: 'horizontal',
-      loop: true,
-
-      // If we need pagination
-      pagination: {
-        el: '.swiper-pagination',
-      },
-
-      
       slidesPerView: 'auto',
-
-      // Navigation arrows
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-
-      // And if we need scrollbar
-      scrollbar: {
-        el: '.swiper-scrollbar',
-      },
       breakpoints: {
         640: {
           slidesPerView: 1,
@@ -531,7 +498,7 @@
       },
     });
   </script>
-  <!-- <script src="app.js"></script> -->
+  <script src="app.js"></script>
 </body>
 
 </html>

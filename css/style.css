@@ -116,6 +116,55 @@ header {
   .btn-menu-toggle {
     display: block !important; } }
 
+@media (orientation: portrait) {
+  header {
+    padding-left: 1rem;
+    padding-right: 1rem; }
+    header nav {
+      background-color: #ffd900;
+      position: fixed;
+      right: 0px;
+      bottom: 0px;
+      width: 250px;
+      height: 100%;
+      z-index: 1; }
+      header nav .nav-1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 320px; }
+        header nav .nav-1 li {
+          margin-top: 10px; }
+      header nav .btn-menu-close {
+        display: block;
+        background-color: yellow;
+        position: absolute;
+        top: 7px;
+        right: 7px;
+        padding-left: 8px;
+        padding-right: 8px;
+        border: none;
+        border-radius: 7px; }
+      header nav .menu-btn-close {
+        display: block !important; }
+    header .active-div {
+      display: block !important; }
+    header .fondo-opaciti {
+      display: none;
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      background: rgba(0, 0, 0, 0.537); }
+    header .btn-menu-toggle {
+      display: block !important;
+      background-color: inherit;
+      border: none; }
+      header .btn-menu-toggle .icon path {
+        color: #19284C; } }
+
 .carrusel {
   grid-area: carrusel;
   position: relative;
@@ -402,8 +451,10 @@ header {
         .ubicacion .cont-ubi .ubi iframe {
           width: 85%;
           height: 400px; }
-      .ubicacion .cont-ubi .date .date2 p {
-        font-size: 20px; } }
+      .ubicacion .cont-ubi .date {
+        width: 90%; }
+        .ubicacion .cont-ubi .date .date2 p {
+          font-size: 20px; } }
 
 .servicios {
   grid-area: "servicios";
@@ -416,15 +467,15 @@ header {
   height: 400px; }
   .servicios h3 {
     color: #19284C;
-    font-size: 34px;
-    font-weight: 800; }
+    font-size: 32px;
+    font-weight: 800;
+    margin-top: 1.5rem; }
   .servicios .swiper .swiper-wrapper .swiper-slide {
     display: flex;
     justify-content: space-around;
     align-items: center;
     margin-right: 100px;
-    padding-bottom: 1.5rem;
-    padding-top: 2rem; }
+    padding-bottom: 1.5rem; }
     .servicios .swiper .swiper-wrapper .swiper-slide .card {
       display: flex;
       background-color: #ffd700;
@@ -446,6 +497,14 @@ header {
         justify-content: center;
         align-items: center; }
 
+@media (max-width: 818px) {
+  .swiper .swiper-button-prev {
+    display: none; }
+  .swiper .swiper-button-next {
+    display: none; }
+  .card {
+    width: 400px !important; } }
+
 @media (orientation: portrait) {
   .servicios {
     display: flex;
@@ -466,15 +525,16 @@ header {
   display: flex;
   height: 90vh;
   background-color: #ffd700;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
+  gap: 50px;
   border-bottom: solid 1px black; }
   .presupuesto .info {
     color: #19284C;
     text-align: start;
     width: 45%; }
     .presupuesto .info h3 {
-      font-size: 50px;
+      font-size: 45px;
       color: #19284C;
       font-weight: 800; }
     .presupuesto .info p {
@@ -484,53 +544,78 @@ header {
     grid-template-areas: "conteiner3 conteiner4" "mensaje mensaje" "buttom buttom"; }
     .presupuesto form .conteiner3 {
       grid-area: conteiner3;
-      margin-right: 10px; }
+      margin-right: 10px;
+      font-family: sans-serif;
+      font-weight: 700; }
       .presupuesto form .conteiner3 .formulario {
         display: flex;
-        flex-direction: column; }
+        flex-direction: column;
+        margin: 5px 0px; }
         .presupuesto form .conteiner3 .formulario input {
-          border-radius: 8px;
+          padding: 5px;
+          border-radius: 5px;
           background-color: #ffff60;
           height: 33px; }
     .presupuesto form .conteiner4 {
-      grid-area: conteiner4; }
+      grid-area: conteiner4;
+      font-family: sans-serif;
+      font-weight: 700; }
       .presupuesto form .conteiner4 .formulario {
         display: flex;
-        flex-direction: column; }
+        flex-direction: column;
+        margin: 5px 0px; }
       .presupuesto form .conteiner4 input {
-        border-radius: 8px;
+        border-radius: 5px;
+        padding: 5px;
         background-color: #ffff60;
         height: 33px; }
       .presupuesto form .conteiner4 select {
         background-color: #ffff60;
         height: 33px;
-        border-radius: 8px;
+        border-radius: 5px;
         border: solid 2px; }
     .presupuesto form .mensaje {
       grid-area: mensaje; }
       .presupuesto form .mensaje .formulario {
         display: flex;
-        flex-direction: column; }
+        flex-direction: column;
+        font-family: sans-serif;
+        font-weight: 700; }
         .presupuesto form .mensaje .formulario textarea {
           background-color: #ffff60;
-          border-radius: 8px;
-          border: solid 2px; }
+          border-radius: 5px;
+          border: solid 2px;
+          resize: none;
+          padding: 5px;
+          font-family: sans-serif; }
     .presupuesto form .buttom {
       grid-area: buttom; }
-      .presupuesto form .buttom input {
+      .presupuesto form .buttom button {
         background-color: #19284C;
         color: white;
-        padding: 5px;
+        font-family: sans-serif;
+        font-weight: 700;
+        padding: 7px;
         border-radius: 5px;
-        margin: 10px; }
-        .presupuesto form .buttom input:hover {
+        margin-top: 10px; }
+        .presupuesto form .buttom button:hover {
           box-shadow: 0 5px 15px black;
           transform: translateY(-3px); }
+      .presupuesto form .buttom .mensaje-enviado {
+        background-color: rgba(17, 17, 211, 0.651);
+        color: white;
+        padding: 10px;
+        border-radius: 7px;
+        margin-top: 7px;
+        text-align: center;
+        color: #ffff60;
+        border: 3px solid #19284C; }
 
 @media (orientation: portrait) {
   .presupuesto {
     display: flex;
-    flex-direction: column; }
+    flex-direction: column;
+    padding: 10px; }
     .presupuesto .info {
       text-align: center;
       display: flex;
@@ -559,7 +644,9 @@ header {
   background-color: #ffd700;
   padding: 1em 0; }
   #pie div h4 {
-    color: #19284C; }
+    color: #19284C;
+    font-size: 30px;
+    font-family: sans-serif; }
   #pie ul {
     display: flex;
     text-align: center; }
