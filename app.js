@@ -1,35 +1,47 @@
-var swiper = new Swiper('.swiper-container', {
-	navigation: {
-	  nextEl: '.swiper-button-next',
-	  prevEl: '.swiper-button-prev'
-	},
-	slidesPerView: 1,
-	spaceBetween: 10,
-	// init: false,
-	pagination: {
-	  el: '.swiper-pagination',
-	  clickable: true,
-	},
-	breakpoints: {
-	  620: {
-		slidesPerView: 2,
-		spaceBetween: 20,
-	  },
-	  680: {
-		slidesPerView: 2,
-		spaceBetween: 40,
-	  },
-	  920: {
-		slidesPerView: 2,
-		spaceBetween: 40,
-	  },
-	  1240: {
-		slidesPerView: 3,
-		spaceBetween: 50,
-	  },
-	} 
-    });
+const formPresupuesto = document.getElementById("form-presuesto");
+const btnForm = document.getElementById("enviar");
+const envioMessage = document.getElementById("envio-message");
+envioMessage.style.display = 'none'
+
+
+formPresupuesto.addEventListener('submit', (e) => {
+
+    e.preventDefault();
+    const form = e.target;
+    const formData = new FormData(form);
+    const formObj = Object.fromEntries(formData.entries());
+    // delete formObj._captcha;
+    // delete formObj._next;
+
+    envioCorreo(formObj).then(res => {
+        if (res.success) {
+            envioMessage.style.display = 'block'
+            setTimeout(() => {
+                formPresupuesto.reset();
+                envioMessage.style.display = 'none'
+            }, 6000)
+        }
+    })
+
+
+})
 
 
 
-    
+
+
+function envioCorreo(mensaje) {
+    return fetch("https://formsubmit.co/ajax/neumaticosmonasterio@gmail.com", {
+        method: "POST",
+        headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+        },
+        body: JSON.stringify(mensaje)
+    })
+        .then(res => res.json())
+        .then(resu => {
+            return resu
+        })
+}
+
