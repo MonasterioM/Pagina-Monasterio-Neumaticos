@@ -228,7 +228,9 @@ header {
         .carrusel .banner-content .info h2 {
           width: 100%; }
         .carrusel .banner-content .info p {
-          width: 90%; } }
+          width: 90%; }
+      .carrusel .banner-content .log {
+        display: none; } }
 
 @keyframes banner {
   0% {
@@ -292,9 +294,9 @@ header {
     .hacemos .video div {
       background-color: rgba(0, 0, 0, 0.1);
       border-radius: 50px;
-      padding: 30px; }
+      width: 80%; }
       .hacemos .video div img {
-        width: 580px;
+        width: 100%;
         height: 230px; }
 
 @media (orientation: portrait) {
@@ -311,9 +313,8 @@ header {
         width: 90%; }
     .hacemos .video {
       width: 100%; }
-      .hacemos .video iframe {
-        width: 95%;
-        height: 30vh; } }
+      .hacemos .video div img {
+        width: 100%; } }
 
 .vendedores {
   grid-area: "vendedores";

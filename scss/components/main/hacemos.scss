@@ -46,9 +46,9 @@
             div{
                 background-color: rgba(0, 0, 0, 0.1);
                 border-radius: 50px;
-                padding: 30px;
+                width: 80%;
                 img{
-                    width: 580px;
+                    width: 100%;
                     height: 230px;
                 }
             }           
@@ -73,9 +73,10 @@
         }
         .video{
             width: 100%;
-            iframe{
-                width: 95%;
-                height: 30vh;
+            div{
+                img{
+                    width: 100%;
+                }
             }
         }
     }
