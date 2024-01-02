@@ -318,7 +318,7 @@ header {
         height: 100px;
         width: 100%; } }
 
-@media (max-width: 500px) {
+@media (max-width: 500px) and (min-width: 200px) {
   .hacemos {
     height: 100vh; }
     .hacemos .why {
@@ -496,9 +496,9 @@ header {
       justify-content: center; }
       .ubicacion .cont-ubi .ubi iframe {
         width: 85%;
-        height: 400px; }
+        height: 100%; }
     .ubicacion .cont-ubi .date {
-      margin-top: 35px;
+      margin-top: 50px;
       width: 90%; }
       .ubicacion .cont-ubi .date .date2 p {
         font-size: 16px; } }
