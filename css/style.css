@@ -512,7 +512,7 @@ header {
   background-color: #fff;
   width: 100%;
   height: 400px; }
-  .servicios h3 {
+  .servicios h4 {
     color: #19284C;
     font-size: 32px;
     font-weight: 800;
@@ -557,7 +557,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center; }
-    .servicios h3 {
+    .servicios h4 {
       text-align: center; }
     .servicios .cards-contenedor {
       display: flex;
@@ -570,7 +570,7 @@ header {
 @media (max-width: 500px) {
   .servicios {
     height: 65vh; }
-    .servicios h3 {
+    .servicios h4 {
       font-size: 30px; } }
 
 .presupuesto {
@@ -689,7 +689,8 @@ header {
       justify-content: center;
       align-items: center;
       flex-direction: column;
-      width: 100%; }
+      width: 100%;
+      height: 100%; }
       .presupuesto .info .prep {
         margin-bottom: 40px; } }
 
