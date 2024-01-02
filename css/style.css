@@ -315,6 +315,22 @@ header {
     .hacemos .video {
       width: 100%; }
       .hacemos .video div img {
+        height: 100px;
+        width: 100%; } }
+
+@media (max-width: 500px) {
+  .hacemos {
+    height: 100vh; }
+    .hacemos .why {
+      margin-top: 20px;
+      width: 100%;
+      height: 100%; }
+      .hacemos .why .why-2 {
+        width: 90%; }
+    .hacemos .video {
+      width: 100%; }
+      .hacemos .video div img {
+        height: 100px;
         width: 100%; } }
 
 .vendedores {
@@ -470,6 +486,23 @@ header {
         .ubicacion .cont-ubi .date .date2 p {
           font-size: 20px; } }
 
+@media (max-width: 500px) {
+  .ubicacion {
+    height: 125vh; }
+    .ubicacion .cont-ubi .ubi {
+      width: 100%;
+      height: 50vh;
+      display: flex;
+      justify-content: center; }
+      .ubicacion .cont-ubi .ubi iframe {
+        width: 85%;
+        height: 400px; }
+    .ubicacion .cont-ubi .date {
+      margin-top: 35px;
+      width: 90%; }
+      .ubicacion .cont-ubi .date .date2 p {
+        font-size: 16px; } }
+
 .servicios {
   grid-area: "servicios";
   display: flex;
@@ -569,7 +602,8 @@ header {
           padding: 5px;
           border-radius: 5px;
           background-color: #ffff60;
-          height: 33px; }
+          height: 33px;
+          width: 100%; }
     .presupuesto form .conteiner4 {
       grid-area: conteiner4;
       font-family: sans-serif;
@@ -640,6 +674,19 @@ header {
       .presupuesto .info .prep {
         margin-bottom: 40px; } }
 
+@media (max-width: 400px) {
+  .presupuesto {
+    height: 100vh; }
+    .presupuesto .info {
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      width: 100%; }
+      .presupuesto .info .prep {
+        margin-bottom: 40px; } }
+
 .cuerpo {
   display: grid;
   background-color: #19284C;
@@ -680,3 +727,12 @@ header {
   #pie ul {
     display: flex;
     flex-direction: column; } }
+
+@media (max-width: 500px) {
+  #pie {
+    height: 25vh; }
+    #pie ul {
+      display: flex;
+      flex-direction: row; }
+      #pie ul li a p {
+        display: none; } }
