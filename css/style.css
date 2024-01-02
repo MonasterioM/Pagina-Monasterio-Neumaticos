@@ -569,7 +569,9 @@ header {
 
 @media (max-width: 500px) {
   .servicios {
-    height: 65vh; } }
+    height: 65vh; }
+    .servicios h3 {
+      font-size: 25px; } }
 
 .presupuesto {
   grid-area: "presupuesto";
@@ -678,9 +680,9 @@ header {
       .presupuesto .info .prep {
         margin-bottom: 40px; } }
 
-@media (max-width: 400px) {
+@media (max-width: 500px) {
   .presupuesto {
-    height: 100vh; }
+    height: 110vh; }
     .presupuesto .info {
       text-align: center;
       display: flex;
@@ -734,7 +736,7 @@ header {
 
 @media (max-width: 500px) {
   #pie {
-    height: 25vh; }
+    height: 35vh; }
     #pie ul {
       display: flex;
       flex-direction: row; }
