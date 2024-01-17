@@ -583,6 +583,9 @@ header {
   gap: 50px;
   border-bottom: solid 1px black; }
   .presupuesto .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     color: #19284C;
     text-align: start;
     width: 45%;

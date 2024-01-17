@@ -7,6 +7,9 @@
     align-items: center;
     gap: 50px;
     .info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         color: $color-primary;
         text-align: start;
         width: 45%;
